@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="navcadastrapetperdidos"
+            type="br.iesb.mobile.petstop.ui.fragment.CadastraPetPerdidoFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Stars_Perfil_Vet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EA9999"
+        tools:context=".ui.fragment.CadastraPetPerdidoFragment">
+
+        <TextView
+            android:id="@+id/nome_local_petfriendly"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="@string/tv_Cadastra_pet_perdido"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.044" />
+
+        <ImageView
+            android:id="@+id/Foto_Cadastra_pet_perdido"
+            android:layout_width="121dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147"
+            tools:src="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/tb_Data_sugerir_local_petfriendly"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/tb_Data_em_que_sumiu"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.551" />
+
+        <EditText
+            android:id="@+id/tb_Endereço_sugerir_local_petfriendly"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/tb_onde_foi_perdido"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.493" />
+
+        <EditText
+            android:id="@+id/tb_Nome_do_local_sugerir_petfriendly"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/tb_Raça_do_pet_perdido"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.435" />
+
+        <EditText
+            android:id="@+id/pb_Nome_do_pet_perdido"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/tb_Nome_do_pet_perdido"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.377" />
+
+        <EditText
+            android:id="@+id/tb_Descrição_detalhada_do_pet_sumido"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/tb_Descrição_detalhada_do_pet_sumido"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.609" />
+
+        <Button
+            android:id="@+id/bt_cadastra_pet_perdido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:shadowColor="#FFFFFF"
+            android:text="@string/tv_Cadastra_pet_perdido"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_Descrição_detalhada_do_pet_sumido" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+

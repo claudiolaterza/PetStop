@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=C5:4A:F3:B7:C9:3B:80:B0:BA:2D:57:C3:88:73:96:74:FA:68:61:32%3Bbr.iesb.mobile.petstop.ui.fragment
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    br.iesb.mobile.petstop.ui.fragment
+
+    SHA-1 certificate fingerprint:
+    C5:4A:F3:B7:C9:3B:80:B0:BA:2D:57:C3:88:73:96:74:FA:68:61:32
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
+</resources>

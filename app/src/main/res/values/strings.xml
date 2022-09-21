@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">PetStop</string>
+    <!--
+   ___________________________Luis_____________________________
+    -->
+    <!--
+   HINTS
+    -->
+    <string name="HintEmail">E-mail</string>
+    <string name="HintSenha">Senha</string>
+    <string name="HintConfirmarSenha">Confirmar Senha</string>
+
+    <!--
+   BOTÕES
+    -->
+    <string name="BotaoEntrar">Entrar</string>
+    <string name="BotaoCadastrar">Cadastrar</string>
+    <string name="BotaoVoltar">Voltar</string>
+    <string name="BotaoEnviar">Enviar</string>
+
+    <string name="EsqueceuASenha">Esqueceu a senha? Clique Aqui</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="NomePetshop">Nome</string>
+    <string name="EnderecoPetshop">Endereço</string>
+    <string name="NomeAnimal">NomeAnimal</string>
+    <string name="DescricaoAnimal">DescricaoAnimal</string>
+
+    <string name="NomeEvento">Nome do Evento</string>
+    <string name="EnderecoEvento">Endereço</string>
+    <string name="HoraEvento">Horário</string>
+    <string name="CheckboxEvento">Marcar</string>
+
+    <string name="NomeGrupo">Nome Do Grupo</string>
+
+    <!--
+   ___________________________Lucas_____________________________
+    -->
+
+    <!--tela perfil veterinario-->
+    <string name="tv_Fulado_de_tal_perfil_vet">Fulado de tal</string>
+    <string name="Esta_disponível_para_atendimento_domeciliar">Está disponível para atendimento domeciliar</string>
+    <string name="tb_Nome_perfil_vet">Nome</string>
+    <string name="tb_Idade">Idade</string>
+    <string name="tb_Local_de_trabalho">Local de trabalho</string>
+    <string name="tb_Contato_perfil_vet">Contato</string>
+    <string name="tb_Resumo_curricular">Resumo Curricular</string>
+    <string name="rb_Sim">Sim</string>
+    <string name="rb_Nâo">Não</string>
+    <string name="desc_vet_img">desc_vet</string>
+
+    <!--tela perfil Petshop-->
+    <string name="tb_Nome_perfil_petshop">Nome</string>
+    <string name="tb_Endereço">Endereço</string>
+    <string name="tb_Contato_perfil_petshop">Contato </string>
+    <string name="tb_Horario_de_funcionamento">Horario de funcionamento</string>
+    <string name="tb_Resumo_serviço_ofericido">Resumo serviço ofericido</string>
+
+    <!--tela cadastra pet perdido-->
+    <string name="tv_Cadastra_pet_perdido">Cadastra pet perdido</string>
+    <string name="tb_Nome_do_pet_perdido">Nome do pet perdido</string>
+    <string name="tb_Raça_do_pet_perdido">Raça do pet perdido</string>
+    <string name="tb_onde_foi_perdido">Onde foi perdido</string>
+    <string name="tb_Data_em_que_sumiu">Data em que sumiu</string>
+    <string name="tb_Descrição_detalhada_do_pet_sumido">Descrição detalhada do pet sumido</string>
+
+    <!--tela sugerir local petfriendly-->
+    <string name="tv_Sugerir_local_petfriendly">Sugerir local petfriendly</string>
+    <string name="tb_Nome_do_local_sugerir_petfriendly">Nome do local sugerir petfriendly</string>
+    <string name="tb_Endereço_sugerir_local_petfriendly">Endereço sugerir local petfriendly</string>
+    <string name="tb_Descrição_sugerir_local_petfriendly">Descrição sugerir local petfriendly</string>
+    <string name="tv_Local_Petfriendly">Local Petfriendly</string>
+    <string name="ck_Restaurante_Petfriendly">Restaurante</string>
+    <string name="ck_Parque_Petfriendly">Parque</string>
+    <string name="ck_Shopping_Petfriendly">Shopping</string>
+    <string name="ck_Bares_Petfriendly">Bares</string>
+    <string name="tv_Filtros_Petfriendly">Filtros</string>
+    <string name="bt_Sugerir_Local_Petfriendly">Sugerir Local</string>
+
+    <!--tela cadastro-->
+    <string name="tb_Botao_Cadastra_Feira_Adocao">Botão Feira De Adoção</string>
+    <string name="tb_CPF_Cadastro">CPF</string>
+    <string name="tb_Nome_Cadastro">Nome Completo</string>
+    <string name="tb_Numero_Telefone_Cadastro">Número de telefone</string>
+
+    <!--tela feira de adoção-->
+    <string name="tb_Titulo_Feira_Adocao">Titulo da feira de adoção</string>
+
+    <!--tela feira de doação-->
+    <string name="tb_Titulo_Feira_Doacao">Titulo da feira de Doação</string>
+    <string name="bt_Cadastra_feira_de_Doação">Cadastrar Feira de Doação</string>
+
+
+    <!--Fragmento grupo selecioando-->
+    <string name="tv_Titulo_do_grupo_selecionado">Titulo do Grupo</string>
+    <string name="tv_Postagem_grupo_selecionado">Postagem Grupo</string>
+    <string name="bt_Participar_do_grupo">Participar do Grupo</string>
+
+    <!-- Fragmentos Minhas feiras de adoção-->
+    <string name="tv_Nome_da_feira_Minhas_feiras_adoção">Nome da feira</string>
+    <string name="tv_Endereço_da_feira_Minhas_feiras_adoção">Endereço da Feira</string>
+    <string name="tv_Horário_da_feira_Minhas_feiras_adoção">Horário da Feira</string>
+    <string name="sw_Presença_Minhas_feiras_adoção">Presença</string>
+
+
+
+
+    <!--
+  ___________________________Claudio_____________________________
+   -->
+
+    <string name="bt_login">Entrar</string>
+    <string name="petstop">PetStop!</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="desc_fundo">Imagem de fundo</string>
+    <string name="desc_bt_login">Botão Login</string>
+    <string name="bt_forgot">Esqueceu sua senha? Clique aqui!</string>
+    <string name="bt_cadastrar_login">Ainda não tem uma conta? Clique aqui para fazer o cadastro!</string>
+    <string name="logo">Logo</string>
+    <string name="forgot_pass">Enviar E-mail</string>
+    <string name="voltar">Voltar</string>
+    <string name="confirma_pass">Confirmar Senha</string>
+    <string name="name">Nome</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="barra_horizontal_desc">Barra Horizontal</string>
+    <string name="icone_menu_lateral">Icone lateral</string>
+    <string name="img_perfil">Perfil</string>
+    <string name="icone_vet">Icone Veterinario</string>
+    <string name="icone_pet">Icone PetShop</string>
+    <string name="icone_comu">Icone Comunidade</string>
+    <string name="icone_chat">Icone Suporte Tecnico</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vet">Veterinários</string>
+    <string name="comu">Comunidade</string>
+    <string name="petshop">PetShops</string>
+    <string name="chatbot">Suporte Técnico</string>
+    <string name="encontros">Encontros</string>
+    <string name="pets_perdidos">Pets Perdidos</string>
+    <string name="doacao">Doação</string>
+    <string name="grupos">Grupos</string>
+    <string name="adocao">Feira de Adoção</string>
+    <string name="pet_friendly">Pet Friendly</string>
+    <string name="icon_encontros">Icone Encontros</string>
+    <string name="icon_pets_perdidos">Icone Pets Perdidos</string>
+    <string name="icon_doacao">Icone Doação</string>
+    <string name="icon_grupos">Icone Grupos</string>
+    <string name="icon_adocao">Icone Feira de Adoção</string>
+    <string name="icon_pet_friendly">Icone Pet Friendly</string>
+    <string name="bt_sugerir_encontro">Sugerir Encontro</string>
+    <string name="bt_participar_encontro">Participar de um Encontro</string>
+    <string name="tp_nome_local_encontro">Nome do Local</string>
+    <string name="tp_endereco_encontro">Endereço</string>
+    <string name="tp_descricao_encontro">Descrição</string>
+    <string name="onb_1">Os melhores veterinários recomendados pela comunidade!</string>
+    <string name="onb_2">Conheça todas as Petshops perto de você!</string>
+    <string name="onb_3">Tenha acesso à milhares de informações com a melhor comunidade Pet do Brasil!</string>
+    <string name="onb_bt">Vamos PetComeçar!</string>
+    <string name="suporte_tecnico">Suporte Técnico</string>
+
+
+
+</resources>

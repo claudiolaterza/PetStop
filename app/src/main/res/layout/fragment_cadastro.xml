@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="btcadastrologin"
+            type="br.iesb.mobile.petstop.ui.fragment.LoginFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.MainActivity"> <!-- ATENCAO-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.59"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.02"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/aaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dog2" />
+
+        <EditText
+            android:id="@+id/cpf_cadastro"
+            android:layout_width="171dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="CPF"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_cadastro" />
+
+        <EditText
+            android:id="@+id/nome_usu_cadastro"
+            android:layout_width="171dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="Nome Completo"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.014" />
+
+        <EditText
+            android:id="@+id/et_email_cadastro"
+            android:layout_width="171dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="@string/hint_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome_usu_cadastro" />
+
+        <EditText
+            android:id="@+id/et_telefone_cadastro"
+            android:layout_width="171dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="Número de telefone"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cpf_cadastro" />
+
+        <EditText
+            android:id="@+id/et_pass_cadastro"
+            android:layout_width="171dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="@string/hint_senha"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_telefone_cadastro" />
+
+        <EditText
+            android:id="@+id/et_confirm_pass_cadastro"
+            android:layout_width="174dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="#48FFFFFF"
+            android:ems="10"
+            android:hint="@string/HintConfirmarSenha"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pass_cadastro" />
+
+        <ImageView
+            android:id="@+id/btenviarchatbot"
+            android:layout_width="172dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petstop_cadastro"
+            app:srcCompat="@drawable/pata_branca" />
+
+        <TextView
+            android:id="@+id/bt_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:fontFamily="@font/oregano"
+            android:text="@string/BotaoCadastrar"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btenviarchatbot" />
+
+        <TextView
+            android:id="@+id/petstop_cadastro"
+            android:layout_width="212dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/oregano"
+            android:text="@string/petstop"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.216" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+
