@@ -3,7 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_lista_veterinarios.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_local_pet_friendly.xml" value="0.358695652173913" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_login.xml" value="0.4" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_menu.xml" value="0.33" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_minhas_feiras_adocao.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_onboarding.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_onboarding1.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_petshops.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_splashscreen.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/fragment_sugerir_encontro.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/petperdtv.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/petshops.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/user_message_layout.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/vets.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/claud/OneDrive/Desktop/PetStop-/app/src/main/res/layout/activity_veterinario.xml" value="0.1" />
         <entry key="..\:/Users/claud/OneDrive/Desktop/PetStop-/app/src/main/res/layout/fragment_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/claud/OneDrive/Desktop/PetStop-/app/src/main/res/layout/fragment_lista_veterinarios.xml" value="0.17831813576494426" />

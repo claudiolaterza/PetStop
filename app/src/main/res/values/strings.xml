@@ -18,6 +18,7 @@
     <string name="BotaoCadastrar">Cadastrar</string>
     <string name="BotaoVoltar">Voltar</string>
     <string name="BotaoEnviar">Enviar</string>
+    <string name="Add_pet">Adicionar petshop</string>
 
     <string name="EsqueceuASenha">Esqueceu a senha?\nClique Aqui</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
