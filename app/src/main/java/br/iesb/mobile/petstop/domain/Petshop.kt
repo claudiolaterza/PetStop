@@ -9,6 +9,8 @@ class Petshop (
     val cnpj: Long?,
     val id: Long?,
     val email: String? ){
+
     constructor() : this(null,null,null, null,null, null, null, null){
     }
+
 }

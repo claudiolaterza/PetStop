@@ -16,15 +16,14 @@ import kotlinx.android.synthetic.main.petshops.view.*
 
 class PetshopAdapter (var listapetshops: List<Petshop>):RecyclerView.Adapter<PetshopAdapter.PetshopViewHolder>(){
     class PetshopViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val nome: TextView = itemView.tv_listpetshop_nome
-        val endereco: TextView = itemView.tv_listpetshop_endereco
-        val telefone: TextView = itemView.tv_listpetshop_telefone
-
+        val nome: TextView = itemView.tv_listpetshop_nome;
+        val endereco: TextView = itemView.tv_listpetshop_endereco;
+        val telefone: TextView = itemView.tv_listpetshop_telefone;
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetshopViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.petshops, parent, false)
-
         return PetshopViewHolder(view)
     }
 
@@ -34,7 +33,6 @@ class PetshopAdapter (var listapetshops: List<Petshop>):RecyclerView.Adapter<Pet
 
     override fun onBindViewHolder(holder: PetshopViewHolder, position: Int) {
         val petshop = listapetshops[position]
-
         holder.nome.text = petshop.name
         holder.endereco.text = petshop.endereco
         holder.telefone.text = petshop.telefone.toString()
