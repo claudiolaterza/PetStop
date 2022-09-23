@@ -16,7 +16,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Titulo - Botar String"
+            android:text="@string/encontros"
             android:textAlignment="center"
             android:textSize="24sp" />
 
