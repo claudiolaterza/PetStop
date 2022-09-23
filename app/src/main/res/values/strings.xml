@@ -13,6 +13,7 @@
     <!--
    BOTÕES
     -->
+    <string name="Add_vet">Adicionar veterinário</string>
     <string name="BotaoEntrar">Entrar</string>
     <string name="BotaoCadastrar">Cadastrar</string>
     <string name="BotaoVoltar">Voltar</string>
