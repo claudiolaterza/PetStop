@@ -24,6 +24,7 @@ class Gerar_QRCode_Activity : AppCompatActivity() {
     private lateinit var etRaca : EditText
     private lateinit var etVacinas : EditText
     private lateinit var btnGenerateQRcode : Button
+    lateinit var voltar : ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +36,14 @@ class Gerar_QRCode_Activity : AppCompatActivity() {
         etIdade = findViewById(R.id.etIdade)
         etRaca = findViewById(R.id.etRaca)
         etVacinas = findViewById(R.id.etVacinas)
-
+        voltar = findViewById(R.id.voltar_gerar_qr)
         btnGenerateQRcode = findViewById(R.id.btnGenerateQRcode)
+
+        voltar.setOnClickListener{
+            var a = Intent(this, QRCodeActivity::class.java)
+            startActivity(a)
+            finish()
+        }
 
         btnGenerateQRcode.setOnClickListener{
 

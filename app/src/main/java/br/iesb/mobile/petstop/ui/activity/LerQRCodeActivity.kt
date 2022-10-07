@@ -63,7 +63,6 @@ class LerQRCodeActivity : AppCompatActivity() {
                 } else{
 
                     pet = Gson().fromJson(result.getContents(), Pets::class.java)
-                    Toast.makeText(this, pet.Nome, Toast.LENGTH_LONG).show();
                     nome.setText(pet.Nome)
                     idade.setText(pet.Idade)
                     raca.setText(pet.Raça)
