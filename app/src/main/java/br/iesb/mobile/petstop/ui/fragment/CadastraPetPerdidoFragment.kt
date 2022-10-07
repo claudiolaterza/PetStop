@@ -9,7 +9,6 @@ import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.R.layout.fragment_pets_perdidos
-import br.iesb.mobile.petstop.databinding.FragmentEncontrosBinding
 import br.iesb.mobile.petstop.databinding.FragmentCadastraPetPerdidoBinding
 import br.iesb.mobile.petstop.domain.PetPerdido
 import br.iesb.mobile.petstop.domain.Usuario

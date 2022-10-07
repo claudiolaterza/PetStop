@@ -12,27 +12,28 @@ import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.Petshop
 import android.util.Log
+import kotlinx.android.synthetic.main.petshop_item.view.*
 import kotlinx.android.synthetic.main.petshops.view.*
 
-class PetshopAdapter (var listapetshops: List<Petshop>):RecyclerView.Adapter<PetshopAdapter.PetshopViewHolder>(){
+class PetshopAdapter (var petshops: List<Petshop>):RecyclerView.Adapter<PetshopAdapter.PetshopViewHolder>(){
     class PetshopViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val nome: TextView = itemView.tv_listpetshop_nome;
-        val endereco: TextView = itemView.tv_listpetshop_endereco;
-        val telefone: TextView = itemView.tv_listpetshop_telefone;
+        val nome: TextView = itemView.tv_nome_petshop_actv;
+        val endereco: TextView = itemView.tv_end_petshop_actv;
+        val telefone: TextView = itemView.tv_lat_petshop_actv;
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetshopViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.petshops, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.petshop_item, parent, false)
         return PetshopViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return listapetshops.size
+        return petshops.size
     }
 
     override fun onBindViewHolder(holder: PetshopViewHolder, position: Int) {
-        val petshop = listapetshops[position]
+        val petshop = petshops[position]
         holder.nome.text = petshop.name
         holder.endereco.text = petshop.endereco
         holder.telefone.text = petshop.telefone.toString()

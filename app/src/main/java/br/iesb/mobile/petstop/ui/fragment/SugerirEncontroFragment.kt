@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.petstop.R
-import br.iesb.mobile.petstop.databinding.FragmentEncontrosBinding
 import br.iesb.mobile.petstop.databinding.FragmentSugerirEncontroBinding
 import br.iesb.mobile.petstop.domain.Encontro
 import com.google.firebase.database.FirebaseDatabase

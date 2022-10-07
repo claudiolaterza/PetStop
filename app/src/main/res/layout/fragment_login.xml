@@ -8,8 +8,6 @@
         <variable
             name="btnavlogin"
             type="br.iesb.mobile.petstop.ui.fragment.LoginFragment" />
-
-
     </data>
 
 

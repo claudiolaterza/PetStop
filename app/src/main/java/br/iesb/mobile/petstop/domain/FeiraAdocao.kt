@@ -2,11 +2,11 @@ package br.iesb.mobile.petstop.domain
 
 import android.widget.CalendarView
 
-class FeiraAdocao(
-    val id: Long? = null,
-    val name: String? = null,
-    val local: String? = null,
-    val avaliacao: Long? = null,
-    val latitude: Long? = null,
-    val longitude: Long? = null
+data class FeiraAdocao(
+    var id: Long? = null,
+    var name: String? = null,
+    var local: String? = null,
+    var avaliacao: Long? = null,
+    var latitude: Long? = null,
+    var longitude: Long? = null
     )

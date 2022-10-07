@@ -60,7 +60,8 @@
             app:layout_constraintStart_toStartOf="@+id/guideline6"
             app:layout_constraintTop_toTopOf="@+id/guideline4"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/comunidade" />
+            app:srcCompat="@drawable/comunidade"
+            />
 
         <ImageView
             android:id="@+id/petstop_menu"

@@ -17,18 +17,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetStop">
-        <activity android:name=".ui.activity.VeterinarioActivity"></activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+        <activity
+            android:name=".ui.activity.LerQRCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.Gerar_QRCode_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ForgotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CadastroActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAv47eAMrNNSMeFPPeX2fKI7CoNEXNG4mk" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".ui.activity.EncontrosMapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_encontros_maps" />
+        <activity
+            android:name=".ui.activity.PetShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.QRCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.MenuComunidadeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.VeterinarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.SuporteTecnicoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.LocalPetFriendlyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.EncontroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.FeiraAdocaoActivity"
+            android:exported="false" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
         <activity android:name=".ui.activity.LoginActivity" />
         <activity
             android:name=".ui.activity.MainActivity"

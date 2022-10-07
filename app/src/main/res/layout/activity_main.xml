@@ -6,16 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity">
 
-    <fragment
-        android:id="@+id/loginNavigationFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
+    <Button
+        android:id="@+id/TESTE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pular para menu principal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/login" />
+        app:layout_constraintVertical_bias="0.568" />
+
+    <Button
+        android:id="@+id/TESTE2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passar pela fase de login"
+        app:layout_constraintBottom_toTopOf="@+id/TESTE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

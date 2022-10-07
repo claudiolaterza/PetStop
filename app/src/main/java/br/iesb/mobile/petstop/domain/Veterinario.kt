@@ -6,5 +6,6 @@ class Veterinario (
     val name: String? = null,
     val cpf: String? = null,
     val email: String? = null,
-    val telefone: Long? = null
+    val telefone: Long? = null,
+    val domicilio: String? = null
 )

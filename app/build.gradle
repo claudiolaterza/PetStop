@@ -5,6 +5,7 @@ plugins {
     id 'com.google.gms.google-services'
     id 'kotlin-kapt'
     id 'com.google.secrets_gradle_plugin' version '0.5'
+//    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -43,10 +44,16 @@ android {
 
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 }
 
 dependencies {
+
+    /*QRCode*/
+    implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    implementation 'com.google.zxing:core:3.2.0'
+
 
     /* Kotlin Libraries */
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -55,7 +62,7 @@ dependencies {
     /* Firebase */
     implementation platform('com.google.firebase:firebase-bom:27.0.0')
     implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.6'
     implementation 'com.firebaseui:firebase-ui-database:6.2.1'
 
     /* Constraint Layout */

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/chatbotFragment">
+
+    <fragment
+        android:id="@+id/chatbotFragment"
+        android:name="br.iesb.mobile.petstop.ui.fragment.ChatbotFragment"
+        android:label="ChatbotFragment" />
+
+</navigation>

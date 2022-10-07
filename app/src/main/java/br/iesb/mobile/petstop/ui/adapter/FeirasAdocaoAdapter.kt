@@ -13,30 +13,33 @@ import br.iesb.mobile.petstop.R
 import android.util.Log
 import br.iesb.mobile.petstop.domain.FeiraAdocao
 import kotlinx.android.synthetic.main.feirasadoc.view.*
+import kotlinx.android.synthetic.main.feirasdoc.view.*
 
-class FeirasAdocaoAdapter (var listafeirasadoc: List<FeiraAdocao>):RecyclerView.Adapter<FeirasAdocaoAdapter.FeirasAdocaoViewHolder>(){
-    class FeirasAdocaoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val nome: TextView = itemView.tv_listfeiraad_nome
-        val local: TextView = itemView.tv_istfeiraad_local
+class FeirasAdocaoAdapter(private val feira_adocao : ArrayList<FeiraAdocao>) : RecyclerView.Adapter<FeirasAdocaoAdapter.MyViewHolder>(){
 
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.feira_item,
+        parent, false)
+        return MyViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeirasAdocaoViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.feirasadoc, parent, false)
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentitem = feira_adocao[position]
 
-        return FeirasAdocaoViewHolder(view)
+        holder.nome.text = currentitem.name
+        holder.local.text = currentitem.local
+        holder.latitude.text = currentitem.latitude.toString()
     }
 
     override fun getItemCount(): Int {
-        return listafeirasadoc.size
+        return feira_adocao.size
     }
 
-    override fun onBindViewHolder(holder:FeirasAdocaoViewHolder, position: Int) {
-        val feirasadoc = listafeirasadoc[position]
+    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        holder.nome.text = feirasadoc.name
-        holder.local.text = feirasadoc.local
-
+        val nome : TextView = itemView.findViewById(R.id.tv_nome_feira_adoc_actv)
+        val local : TextView = itemView.findViewById(R.id.tv_end_feira_adoc_actv)
+        val latitude : TextView = itemView.findViewById(R.id.tv_data_feira_adoc_actv)
     }
 }
