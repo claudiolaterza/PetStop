@@ -69,7 +69,6 @@ class Gerar_QRCode_Activity : AppCompatActivity() {
                         }
                     }
                     ivQRcode.setImageBitmap(bmp)
-                    Toast.makeText(this, code, Toast.LENGTH_LONG).show()
                 }catch(e: WriterException){
                     e.printStackTrace()
                 }

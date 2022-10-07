@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil.setContentView
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.databinding.ActivityLoginBinding
@@ -32,20 +33,18 @@ class LoginActivity : AppCompatActivity() {
             val senha = binding.passText.text.toString()
 
             if(email.isEmpty() || senha.isEmpty()){
-                val snackbar = Snackbar.make(view, "Preencha todos os campos!", Snackbar.LENGTH_LONG)
-                snackbar.setBackgroundTint(Color.BLACK)
-                snackbar.show()
+                Toast.makeText(this, "Certifique-se de preencher todos os campos!", Toast.LENGTH_LONG).show()
             }else{
                 auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener{ task ->
                     if(task.isSuccessful){
-                        val snackbar = Snackbar.make(view, "Sucesso ao cadastrar usuário!", Snackbar.LENGTH_LONG)
-                        snackbar.setBackgroundTint(Color.BLACK)
-                        snackbar.show()
+                        Toast.makeText(this, "Login efetuado com sucesso!", Toast.LENGTH_LONG).show()
                         binding.loginText.setText("")
                         binding.passText.setText("")
                         var a = Intent(this, MenuPrincipalActivity::class.java)
                         startActivity(a)
                         finish()
+                    } else{
+                        Toast.makeText(this, "Login ou senha incorretos!", Toast.LENGTH_LONG).show()
                     }
                 }.addOnFailureListener{
 

@@ -5,10 +5,7 @@ import android.graphics.Color
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.databinding.ActivityCadastroBinding
 import br.iesb.mobile.petstop.databinding.ActivityLoginBinding
@@ -40,15 +37,11 @@ class CadastroActivity : AppCompatActivity() {
             val senha = binding.atvEtPassCadastro.text.toString()
 
             if(email.isEmpty() || senha.isEmpty()){
-                val snackbar = Snackbar.make(view, "Preencha todos os campos!", Snackbar.LENGTH_LONG)
-                snackbar.setBackgroundTint(Color.BLACK)
-                snackbar.show()
+                Toast.makeText(this, "Certifique-se de preencher todos os campos", Toast.LENGTH_LONG).show()
             }else{
                 auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener{ task ->
                     if(task.isSuccessful){
-                        val snackbar = Snackbar.make(view, "Sucesso ao cadastrar usuário!", Snackbar.LENGTH_LONG)
-                        snackbar.setBackgroundTint(Color.BLACK)
-                        snackbar.show()
+                        Toast.makeText(this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show()
                         binding.atvEtEmailCadastro.setText("")
                         binding.atvEtPassCadastro.setText("")
                         var a = Intent(this, LoginActivity::class.java)
