@@ -7,9 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.Encontro
+import kotlinx.android.synthetic.main.encontro_item.view.*
 
 
-class EncontroAdapter(private val encontro : ArrayList<Encontro>) : RecyclerView.Adapter<EncontroAdapter.MyViewHolder>(){
+class EncontroAdapter(private val encontro : ArrayList<Encontro>, var clickEncontro: ClickEncontro) : RecyclerView.Adapter<EncontroAdapter.MyViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -24,10 +25,19 @@ class EncontroAdapter(private val encontro : ArrayList<Encontro>) : RecyclerView
         holder.nome.text = currentitem.name
         holder.local.text = currentitem.local
         holder.latitude.text = currentitem.latitude.toString()
+
+        holder.cardView.setOnClickListener{
+            clickEncontro.clickEncontro(currentitem)
+        }
     }
 
     override fun getItemCount(): Int {
         return encontro.size
+    }
+
+    interface ClickEncontro{
+        fun clickEncontro(encontro: Encontro)
+
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
@@ -35,5 +45,8 @@ class EncontroAdapter(private val encontro : ArrayList<Encontro>) : RecyclerView
         val nome : TextView = itemView.findViewById(R.id.tv_nome_encontro_actv)
         val local : TextView = itemView.findViewById(R.id.tv_end_encontro_actv)
         val latitude : TextView = itemView.findViewById(R.id.tv_data_encontro_actv)
+        val cardView = itemView.card_encontro
+
     }
+
 }

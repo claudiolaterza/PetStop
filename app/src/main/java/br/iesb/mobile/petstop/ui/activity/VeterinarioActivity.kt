@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
@@ -40,24 +41,32 @@ class VeterinarioActivity : AppCompatActivity() {
 
     }
 
-
-
     private fun getUserData(){
         dbref = FirebaseDatabase.getInstance().getReference("Veterinários")
 
-        dbref.addValueEventListener(object : ValueEventListener {
+        dbref.addValueEventListener(object : ValueEventListener,
+            VeterinarioAdapter.ClickVeterinario {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     for(veterinarioSnapshot in snapshot.children){
                         val veterinario = veterinarioSnapshot.getValue(Veterinario::class.java)
                         veterinarioArrayList.add(veterinario!!)
                     }
-                    veterinarioRecyclerView.adapter = VeterinarioAdapter(veterinarioArrayList)
+                    veterinarioRecyclerView.adapter = VeterinarioAdapter(veterinarioArrayList, this)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
 
+            }
+
+            override fun clickVeterinario(veterinario: Veterinario) {
+               val intent = Intent(this@VeterinarioActivity, PerfilVeterinarioActivity::class.java)
+                intent.putExtra("nome", veterinario.name)
+                intent.putExtra("domicilio", veterinario.domicilio)
+                intent.putExtra("local", veterinario.endereco)
+                startActivity(intent)
+                finish()
             }
 
         })

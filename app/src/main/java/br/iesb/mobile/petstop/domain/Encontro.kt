@@ -7,4 +7,5 @@ class Encontro (
     val descricao: String? = null,
     val longitude: String? = null,
     val name: String? = null,
-    val numeroParticipantes: Long? = null)
+    val data: String? = null,
+    )

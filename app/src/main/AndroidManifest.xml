@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetStop">
         <activity
+            android:name=".ui.activity.PerfilEncontroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PerfilVeterinarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.LerQRCodeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -80,6 +86,16 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

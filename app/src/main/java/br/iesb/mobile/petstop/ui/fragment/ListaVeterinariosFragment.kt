@@ -40,20 +40,11 @@ class ListaVeterinariosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        inicializarRecycler()
+
         getVeterinario()
 
     }
-
-    fun inicializarRecycler() {
-        adapter = VeterinarioAdapter(listOf<Veterinario>(
-            Veterinario(0, "","", "", "", 0, )
-        ))
-        listaVeterinarios.layoutManager = LinearLayoutManager(activity?.applicationContext)
-        listaVeterinarios.adapter = adapter
-
-
-    }
+    
 
     private fun getVeterinario() {
 

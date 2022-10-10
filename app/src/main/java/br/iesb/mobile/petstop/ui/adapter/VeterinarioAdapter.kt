@@ -15,7 +15,7 @@ import android.util.Log
 import kotlinx.android.synthetic.main.veterinario_item.view.*
 import kotlinx.android.synthetic.main.vets.view.*
 
-class VeterinarioAdapter (var listaveterinario: List<Veterinario>):RecyclerView.Adapter<VeterinarioAdapter.VeterinarioViewHolder>(){
+class VeterinarioAdapter (var listaveterinario: List<Veterinario>, var clickVeterinario: ClickVeterinario):RecyclerView.Adapter<VeterinarioAdapter.VeterinarioViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VeterinarioViewHolder {
         val view =
@@ -30,9 +30,13 @@ class VeterinarioAdapter (var listaveterinario: List<Veterinario>):RecyclerView.
         val nome: TextView = itemView.tv_nome_veterinario_actv
         val endereco: TextView = itemView.tv_pet_veterinario_actv
         val domicilio: TextView = itemView.tv_domicilio_veterinario_actv
+        val cardView = itemView.card_veterinario
 
     }
 
+    interface ClickVeterinario{
+        fun clickVeterinario(veterinario: Veterinario)
+    }
 
     override fun getItemCount(): Int {
         return listaveterinario.size
@@ -45,6 +49,10 @@ class VeterinarioAdapter (var listaveterinario: List<Veterinario>):RecyclerView.
         holder.endereco.text = veterinario.endereco
         holder.telefone.text = veterinario.telefone.toString()
         holder.domicilio.text = veterinario.domicilio
+
+        holder.cardView.setOnClickListener{
+            clickVeterinario.clickVeterinario(veterinario)
+        }
 
     }
 
