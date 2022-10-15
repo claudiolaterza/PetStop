@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.encontro_item.view.*
 
 class EncontroAdapter(private val encontro : ArrayList<Encontro>, var clickEncontro: ClickEncontro) : RecyclerView.Adapter<EncontroAdapter.MyViewHolder>(){
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.encontro_item,
             parent, false)
@@ -25,7 +24,8 @@ class EncontroAdapter(private val encontro : ArrayList<Encontro>, var clickEncon
         holder.nome.text = currentitem.name
         holder.local.text = currentitem.local
         holder.latitude.text = currentitem.latitude.toString()
-
+        holder.longitude.text = currentitem.latitude.toString()
+        holder.data.text = currentitem.data.toString()
         holder.cardView.setOnClickListener{
             clickEncontro.clickEncontro(currentitem)
         }
@@ -44,9 +44,10 @@ class EncontroAdapter(private val encontro : ArrayList<Encontro>, var clickEncon
 
         val nome : TextView = itemView.findViewById(R.id.tv_nome_encontro_actv)
         val local : TextView = itemView.findViewById(R.id.tv_end_encontro_actv)
-        val latitude : TextView = itemView.findViewById(R.id.tv_data_encontro_actv)
+        val latitude : TextView = itemView.findViewById(R.id.tv_lat_enc_actv)
+        val longitude : TextView = itemView.findViewById(R.id.tv_long_enc_actv)
+        val data : TextView = itemView.findViewById(R.id.tv_data_encontro_actv)
         val cardView = itemView.card_encontro
-
     }
 
 }

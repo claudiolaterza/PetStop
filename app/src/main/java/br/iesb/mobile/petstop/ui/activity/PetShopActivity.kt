@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
@@ -36,27 +37,35 @@ class PetShopActivity : AppCompatActivity() {
             startActivity(a)
             finish()
         }
-
     }
 
     private fun getUserData(){
         dbref = FirebaseDatabase.getInstance().getReference("PetShops")
 
-        dbref.addValueEventListener(object : ValueEventListener {
+        dbref.addValueEventListener(object : ValueEventListener, PetshopAdapter.ClickPetshop {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     for(petshopSnapshot in snapshot.children){
                         val petshop = petshopSnapshot.getValue(Petshop::class.java)
                         petshopArrayList.add(petshop!!)
                     }
-                    petshopRecyclerView.adapter = PetshopAdapter(petshopArrayList)
+                    petshopRecyclerView.adapter = PetshopAdapter(petshopArrayList, this)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-
             }
 
+            override fun clickPetshop(petshop: Petshop) {
+                val intent = Intent(this@PetShopActivity, PerfilPetshopActivity::class.java)
+                intent.putExtra("nome", petshop.name)
+                intent.putExtra("local", petshop.endereco)
+                intent.putExtra("telefone", petshop.telefone)
+                intent.putExtra("latitude", petshop.lat)
+                intent.putExtra("longitude", petshop.long)
+                startActivity(intent)
+                finish()
+            }
         })
     }
 

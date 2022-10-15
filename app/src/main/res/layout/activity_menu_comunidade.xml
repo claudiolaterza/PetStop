@@ -37,18 +37,18 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/img_petfriendly_menu_comu"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:src="@drawable/petfriendly" />
+
+            <ImageView
                 android:id="@+id/img_feiras_adoc_menu_comu"
                 android:layout_width="260dp"
                 android:layout_height="260dp"
                 android:layout_marginStart="50dp"
                 android:contentDescription="@string/icon_adocao"
                 android:src="@drawable/icon_adocao" />
-
-            <ImageView
-                android:id="@+id/img_petfriendly_menu_comu"
-                android:layout_width="260dp"
-                android:layout_height="260dp"
-                android:src="@drawable/petfriendly" />
 
             <ImageView
                 android:id="@+id/img_feira_doacao_menu_comu"

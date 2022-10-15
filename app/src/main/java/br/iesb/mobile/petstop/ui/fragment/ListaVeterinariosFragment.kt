@@ -44,7 +44,7 @@ class ListaVeterinariosFragment : Fragment() {
         getVeterinario()
 
     }
-    
+
 
     private fun getVeterinario() {
 

@@ -1,16 +1,12 @@
 package br.iesb.mobile.petstop.domain
 
 class Petshop (
-    val telefone: Long?,
-    val name: String?,
-    val endereco: String?,
-    val lat: Long?,
-    val long: Long?,
-    val cnpj: Long?,
-    val id: Long?,
-    val email: String? ){
-
-    constructor() : this(null,null,null, null,null, null, null, null){
-    }
-
-}
+    val telefone: String? = null,
+    val name: String? = null,
+    val endereco: String? = null,
+    val lat: String? = null,
+    val long: String? = null,
+    val cnpj: String? = null,
+    val id: Long? = null,
+    val email: String? = null
+)

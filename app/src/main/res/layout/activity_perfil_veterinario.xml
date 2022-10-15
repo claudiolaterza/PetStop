@@ -8,23 +8,12 @@
     tools:context=".ui.activity.PerfilVeterinarioActivity">
 
     <TextView
-        android:id="@+id/tv_nome_perfil_veterinario"
-        android:layout_width="369dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="356dp"
-        android:hint="Nome do Veterinário"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/tv_domicilio_perfil"
         android:layout_width="363dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="60dp"
         android:hint="Atende em casa?"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -32,28 +21,119 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_endereco_perfil_veterinario" />
 
     <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Telefone"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_telefone_perfil_veterinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/tv_endereco_perfil_veterinario"
         android:layout_width="366dp"
         android:layout_height="67dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:hint="Endereço do Veterinário"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_veterinario" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_telefone_perfil_veterinario" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="Nome"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nome_perfil_veterinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Atende em casa?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_domicilio_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_curriculo_perfil_veterinario"
-        android:layout_width="366dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="378dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="52dp"
         android:hint="Currículo do Veterinário"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_domicilio_perfil" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Endereço"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_endereco_perfil_veterinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_telefone_perfil_veterinario"
+        android:layout_width="369dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="520dp"
+        android:hint="Telefone do Veterinário"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nome_perfil_veterinario"
+        android:layout_width="369dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="624dp"
+        android:hint="Nome do Veterinário"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Currículo profissional"
+        android:textColor="#8A8A8A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_curriculo_perfil_veterinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/voltar_perfil_veterinario"

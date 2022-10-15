@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.EncontroActivity">
 
+    <TextView
+        android:id="@+id/titulo_encontros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/oregano"
+        android:text="Encontros"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ac_encontro"
         android:layout_width="405dp"
-        android:layout_height="650dp"
+        android:layout_height="634dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,17 +48,5 @@
         app:layout_constraintTop_toBottomOf="@+id/rv_ac_encontro"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@drawable/voltar" />
-
-    <ImageView
-        android:id="@+id/mapa_encontro"
-        android:layout_width="98dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.882"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_encontro"
-        app:layout_constraintVertical_bias="0.77"
-        app:srcCompat="@drawable/mapa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

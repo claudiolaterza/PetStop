@@ -11,10 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/pet_friendly"
+        android:fontFamily="@font/oregano"
+        android:text="Locais PetFriendly"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,25 +31,15 @@
         tools:listitem="@layout/petfriendly_item" />
 
     <ImageView
-        android:id="@+id/voltar_atv_pet_f"
+        android:id="@+id/voltar_petfriendly"
         android:layout_width="69dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_petfriendly"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/voltar" />
-
-    <ImageView
-        android:id="@+id/mapa_pet_f"
-        android:layout_width="98dp"
-        android:layout_height="51dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline13"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_petfriendly"
-        app:srcCompat="@drawable/mapa" />
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/voltar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"

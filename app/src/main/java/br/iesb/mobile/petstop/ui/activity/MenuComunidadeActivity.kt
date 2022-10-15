@@ -51,12 +51,12 @@ class MenuComunidadeActivity : AppCompatActivity() {
             finish()
         }
         f_doa.setOnClickListener{
-            var e = Intent(this, FeiraAdocaoActivity::class.java) //trocar por feira doação actv
+            var e = Intent(this, FeiraDoacaoActivity::class.java) //trocar por feira doação actv
             startActivity(e)
             finish()
         }
         perdidos.setOnClickListener{
-            var f = Intent(this, LocalPetFriendlyActivity::class.java) //trocar por petsperdidos actv
+            var f = Intent(this, PetPerdidoActivity::class.java) //trocar por petsperdidos actv
             startActivity(f)
             finish()
         }

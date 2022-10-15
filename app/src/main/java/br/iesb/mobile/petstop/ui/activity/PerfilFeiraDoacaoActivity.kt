@@ -5,39 +5,45 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
+import br.iesb.mobile.petstop.domain.FeiraAdocao
+import com.google.firebase.database.DatabaseReference
 
-class PerfilEncontroActivity : AppCompatActivity() {
+class PerfilFeiraDoacaoActivity : AppCompatActivity() {
 
     private lateinit var campo_nome : TextView
     private lateinit var campo_local : TextView
-    private lateinit var campo_data : TextView
-    private lateinit var campo_lat : TextView
-    private lateinit var campo_long : TextView
+    private lateinit var data : TextView
     private lateinit var voltar : ImageView
+    private lateinit var latitude : TextView
+    private lateinit var longitude : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_perfil_encontro)
+        setContentView(R.layout.activity_perfil_feira_doacao)
 
-        voltar = findViewById(R.id.voltar_perfil_encontro)
+        voltar = findViewById(R.id.voltar_perfil_feiradoacao)
 
         voltar.setOnClickListener{
-            var y = Intent(this, EncontroActivity::class.java)
+            var y = Intent(this, FeiraDoacaoActivity::class.java)
             startActivity(y)
             finish()
         }
 
-        campo_data = findViewById(R.id.tv_data_perfil_encontro)
-        campo_nome = findViewById(R.id.tv_nome_perfil_encontro)
-        campo_local = findViewById(R.id.tv_endereco_perfil_encontro)
-        campo_lat = findViewById(R.id.tv_lat_perfil_enc)
-        campo_long = findViewById(R.id.tv_long_perfil_enc)
+        data = findViewById(R.id.tv_data_perfil_feiradoacao)
+        campo_nome = findViewById(R.id.tv_nome_perfil_feiradoacao)
+        campo_local = findViewById(R.id.tv_local_perfil_feiradoacao)
+        longitude = findViewById(R.id.tv_longitude_perfil_feiradoacao)
+        latitude = findViewById(R.id.tv_latitude_perfil_feiradoacao)
+
+        // setando os valores para os campos
+
         campo_nome.setText(recuperarNome())
         campo_local.setText(recuperarLocal())
-        campo_data.setText(recuperarData())
-        campo_lat.setText(recuperarLat())
-        campo_long.setText(recuperarLong())
+        longitude.setText(recuperarLongitude())
+        latitude.setText(recuperarLatitude())
+        data.setText(recuperarData())
 
     }
 
@@ -58,12 +64,12 @@ class PerfilEncontroActivity : AppCompatActivity() {
         return data
     }
 
-    private fun recuperarLat (): String? {
+    private fun recuperarLatitude (): String? {
         val lat = intent.getStringExtra("latitude")
         return lat
     }
 
-    private fun recuperarLong (): String? {
+    private fun recuperarLongitude (): String? {
         val long = intent.getStringExtra("longitude")
         return long
     }

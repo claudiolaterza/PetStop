@@ -14,6 +14,8 @@ class PerfilVeterinarioActivity : AppCompatActivity() {
     private lateinit var campo_local : TextView
     private lateinit var campo_nome : TextView
     private lateinit var campo_domicilio : TextView
+    private lateinit var campo_curriculo : TextView
+    private lateinit var campo_telefone : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,10 +32,24 @@ class PerfilVeterinarioActivity : AppCompatActivity() {
         campo_domicilio = findViewById(R.id.tv_domicilio_perfil)
         campo_nome = findViewById(R.id.tv_nome_perfil_veterinario)
         campo_local = findViewById(R.id.tv_endereco_perfil_veterinario)
+        campo_curriculo = findViewById(R.id.tv_curriculo_perfil_veterinario)
+        campo_telefone = findViewById(R.id.tv_telefone_perfil_veterinario)
         campo_nome.setText(recuperarNome())
         campo_local.setText(recuperarEndereco())
         campo_domicilio.setText(recuperarDomicilio())
+        campo_telefone.setText(recuperarTelefone())
+        campo_curriculo.setText(recuperarCurriculo())
 
+    }
+
+    private fun recuperarTelefone(): String?{
+        val telefone = intent.getStringExtra("telefone")
+        return telefone
+    }
+
+    private fun recuperarCurriculo(): String?{
+        val curriculo = intent.getStringExtra("curriculo")
+        return curriculo
     }
 
     private fun recuperarNome(): String?{

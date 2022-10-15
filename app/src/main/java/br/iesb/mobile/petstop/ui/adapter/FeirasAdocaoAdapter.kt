@@ -12,11 +12,20 @@ import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
 import android.util.Log
 import br.iesb.mobile.petstop.domain.FeiraAdocao
+import kotlinx.android.synthetic.main.feira_item.view.*
 import kotlinx.android.synthetic.main.feirasadoc.view.*
 import kotlinx.android.synthetic.main.feirasdoc.view.*
 
-class FeirasAdocaoAdapter(private val feira_adocao : ArrayList<FeiraAdocao>) : RecyclerView.Adapter<FeirasAdocaoAdapter.MyViewHolder>(){
+class FeirasAdocaoAdapter(private val feira_adocao : ArrayList<FeiraAdocao>, var clickFeiraAdocao: ClickFeiraAdocao) : RecyclerView.Adapter<FeirasAdocaoAdapter.MyViewHolder>(){
 
+    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        val nome : TextView = itemView.findViewById(R.id.tv_nome_feira_adoc_actv)
+        val local : TextView = itemView.findViewById(R.id.tv_end_feira_adoc_actv)
+        val latitude : TextView = itemView.findViewById(R.id.tv_lat_feira_adoc_actv)
+        val longitude : TextView = itemView.findViewById(R.id.tv_long_feira_adoc_actv)
+        val data : TextView = itemView.findViewById(R.id.tv_data_feira_adoc_actv)
+        val cardView = itemView.card_feira
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.feira_item,
@@ -24,22 +33,24 @@ class FeirasAdocaoAdapter(private val feira_adocao : ArrayList<FeiraAdocao>) : R
         return MyViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentitem = feira_adocao[position]
-
-        holder.nome.text = currentitem.name
-        holder.local.text = currentitem.local
-        holder.latitude.text = currentitem.latitude.toString()
-    }
-
     override fun getItemCount(): Int {
         return feira_adocao.size
     }
 
-    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    interface ClickFeiraAdocao{
+        fun clickFeiraAdocao(feiraadocao: FeiraAdocao)
+    }
 
-        val nome : TextView = itemView.findViewById(R.id.tv_nome_feira_adoc_actv)
-        val local : TextView = itemView.findViewById(R.id.tv_end_feira_adoc_actv)
-        val latitude : TextView = itemView.findViewById(R.id.tv_data_feira_adoc_actv)
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentitem = feira_adocao[position]
+
+        holder.nome.text = currentitem.name.toString()
+        holder.local.text = currentitem.local.toString()
+        holder.latitude.text = currentitem.latitude.toString()
+        holder.longitude.text = currentitem.longitude.toString()
+        holder.data.text = currentitem.data.toString()
+        holder.cardView.setOnClickListener{
+            clickFeiraAdocao.clickFeiraAdocao(currentitem)
+        }
     }
 }

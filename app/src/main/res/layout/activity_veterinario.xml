@@ -6,14 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.VeterinarioActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ac_veterinario"
-        android:layout_width="407dp"
-        android:layout_height="657dp"
+        android:layout_width="424dp"
+        android:layout_height="614dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495"
         tools:listitem="@layout/veterinario_item" />
+
+    <TextView
+        android:id="@+id/titulo_veterinarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/oregano"
+        android:text="@string/vet"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/voltar_atv_veterinario"
@@ -26,16 +44,6 @@
         app:layout_constraintTop_toBottomOf="@+id/rv_ac_veterinario"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/voltar" />
-
-    <ImageView
-        android:id="@+id/mapa_vet"
-        android:layout_width="98dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline15"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_veterinario"
-        app:srcCompat="@drawable/mapa" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"

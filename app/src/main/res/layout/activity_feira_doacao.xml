@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.PetShopActivity">
+    tools:context=".ui.activity.FeiraDoacaoActivity">
 
     <TextView
-        android:id="@+id/titulo_petshop"
+        android:id="@+id/titulo_feirasdoacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/oregano"
-        android:text="@string/petshop"
+        android:text="Feiras de Doação"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
@@ -21,33 +21,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_ac_petshop"
-        android:layout_width="427dp"
-        android:layout_height="608dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/rv_ac_feira_doac"
+        android:layout_width="404dp"
+        android:layout_height="602dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_petshop"
-        tools:listitem="@layout/petshop_item" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/feira_item" />
 
     <ImageView
-        android:id="@+id/voltar_atv_petshop"
+        android:id="@+id/voltar_atv_feira_doac"
         android:layout_width="69dp"
         android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline14"
-        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_petshop"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/rv_ac_feira_doac"
         app:srcCompat="@drawable/voltar" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline14"
+        android:id="@+id/guideline17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

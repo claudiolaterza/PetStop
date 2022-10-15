@@ -30,6 +30,7 @@ class VeterinarioAdapter (var listaveterinario: List<Veterinario>, var clickVete
         val nome: TextView = itemView.tv_nome_veterinario_actv
         val endereco: TextView = itemView.tv_pet_veterinario_actv
         val domicilio: TextView = itemView.tv_domicilio_veterinario_actv
+        val curriculo: TextView = itemView.tv_curriculo_item_veterinario
         val cardView = itemView.card_veterinario
 
     }
@@ -45,16 +46,14 @@ class VeterinarioAdapter (var listaveterinario: List<Veterinario>, var clickVete
     override fun onBindViewHolder(holder: VeterinarioViewHolder, position: Int) {
         val veterinario = listaveterinario[position]
 
-        holder.nome.text = veterinario.name
-        holder.endereco.text = veterinario.endereco
+        holder.nome.text = veterinario.name.toString()
+        holder.endereco.text = veterinario.endereco.toString()
         holder.telefone.text = veterinario.telefone.toString()
-        holder.domicilio.text = veterinario.domicilio
+        holder.domicilio.text = veterinario.domicilio.toString()
+        holder.curriculo.text = veterinario.curriculo.toString()
 
         holder.cardView.setOnClickListener{
             clickVeterinario.clickVeterinario(veterinario)
         }
-
     }
-
 }
-

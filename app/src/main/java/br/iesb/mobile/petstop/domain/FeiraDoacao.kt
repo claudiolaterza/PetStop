@@ -1,10 +1,11 @@
 package br.iesb.mobile.petstop.domain
 
 class FeiraDoacao(
-    val id: Long? = null,
-    val name: String? = null,
-    val local: String? = null,
-    val avaliacao: Long? = null,
-    val latitude: Long? = null,
-    val longitude: Long? = null
-    )
+    var id: Long? = null,
+    var name: String? = null,
+    var local: String? = null,
+    var avaliacao: Int? = null,
+    var latitude: String? = null,
+    var longitude: String? = null,
+    var data: String? = null
+)

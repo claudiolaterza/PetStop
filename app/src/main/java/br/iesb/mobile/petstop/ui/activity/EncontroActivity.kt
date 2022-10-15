@@ -58,11 +58,10 @@ class EncontroActivity : AppCompatActivity() {
             }
 
             override fun clickEncontro(encontro: Encontro) {
-
-                Toast.makeText(this@EncontroActivity, encontro.name + " " + encontro.local, 3).show()
-
                 val intent = Intent(this@EncontroActivity, PerfilEncontroActivity::class.java)
                 intent.putExtra("nome", encontro.name)
+                intent.putExtra("latitude", encontro.latitude)
+                intent.putExtra("longitude", encontro.longitude)
                 intent.putExtra("local", encontro.local)
                 intent.putExtra("data", encontro.data)
                 startActivity(intent)

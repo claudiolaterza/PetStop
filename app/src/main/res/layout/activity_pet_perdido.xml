@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.PetShopActivity">
+    tools:context=".ui.activity.PetPerdidoActivity">
 
     <TextView
-        android:id="@+id/titulo_petshop"
+        android:id="@+id/titulo_petperdido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/oregano"
-        android:text="@string/petshop"
+        android:text="Pets Perdidos"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
@@ -21,17 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_ac_petshop"
+        android:id="@+id/rv_ac_petperdido"
         android:layout_width="427dp"
         android:layout_height="608dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_petshop"
-        tools:listitem="@layout/petshop_item" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo_petperdido"
+        tools:listitem="@layout/petperdido_item" />
 
     <ImageView
-        android:id="@+id/voltar_atv_petshop"
+        android:id="@+id/voltar_atv_petperdido"
         android:layout_width="69dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_petshop"
+        app:layout_constraintTop_toBottomOf="@+id/rv_ac_petperdido"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/voltar" />
 

@@ -65,10 +65,11 @@ class VeterinarioActivity : AppCompatActivity() {
                 intent.putExtra("nome", veterinario.name)
                 intent.putExtra("domicilio", veterinario.domicilio)
                 intent.putExtra("local", veterinario.endereco)
+                intent.putExtra("telefone", veterinario.telefone)
+                intent.putExtra("curriculo", veterinario.curriculo)
                 startActivity(intent)
                 finish()
             }
-
         })
     }
 }

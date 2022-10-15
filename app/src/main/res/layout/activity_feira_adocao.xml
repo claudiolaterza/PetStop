@@ -6,11 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.FeiraAdocaoActivity">
 
+    <TextView
+        android:id="@+id/titulo_feirasadocao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/oregano"
+        android:text="Feiras de Adoção"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ac_feira_adoc"
-        android:layout_width="399dp"
-        android:layout_height="646dp"
+        android:layout_width="403dp"
+        android:layout_height="585dp"
+        android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/feira_item" />
@@ -23,16 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_ac_feira_adoc"
         app:srcCompat="@drawable/voltar" />
-
-    <ImageView
-        android:id="@+id/mapa_feira_adocao"
-        android:layout_width="98dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline17"
-        app:layout_constraintTop_toBottomOf="@+id/rv_ac_feira_adoc"
-        app:srcCompat="@drawable/mapa" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.FeiraAdocao
+import br.iesb.mobile.petstop.domain.Petshop
 import br.iesb.mobile.petstop.ui.adapter.FeirasAdocaoAdapter
 import com.google.firebase.database.*
 
@@ -16,7 +17,8 @@ class FeiraAdocaoActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var feiraRecyclerView: RecyclerView
     private lateinit var feiraArrayList : ArrayList<FeiraAdocao>
-    lateinit var voltar : ImageView
+    private lateinit var voltar : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feira_adocao)
@@ -41,19 +43,29 @@ class FeiraAdocaoActivity : AppCompatActivity() {
     private fun getUserData(){
         dbref = FirebaseDatabase.getInstance().getReference("FeiraAdocao")
 
-        dbref.addValueEventListener(object : ValueEventListener{
+        dbref.addValueEventListener(object : ValueEventListener, FeirasAdocaoAdapter.ClickFeiraAdocao{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     for(feiraSnapshot in snapshot.children){
                         val feira = feiraSnapshot.getValue(FeiraAdocao::class.java)
                         feiraArrayList.add(feira!!)
                     }
-                    feiraRecyclerView.adapter = FeirasAdocaoAdapter(feiraArrayList)
+                    feiraRecyclerView.adapter = FeirasAdocaoAdapter(feiraArrayList, this)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
+            }
 
+            override fun clickFeiraAdocao(feiraadocao: FeiraAdocao) {
+                val intent = Intent(this@FeiraAdocaoActivity, PerfilFeiraAdocaoActivity::class.java)
+                intent.putExtra("nome", feiraadocao.name)
+                intent.putExtra("local", feiraadocao.local)
+                intent.putExtra("data", feiraadocao.data)
+                intent.putExtra("latitude", feiraadocao.latitude)
+                intent.putExtra("longitude", feiraadocao.longitude)
+                startActivity(intent)
+                finish()
             }
 
         })

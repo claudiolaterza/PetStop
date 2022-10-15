@@ -12,11 +12,33 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/placa_com_pata"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/placa_com_pata"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetStop">
+
+        <activity
+            android:name=".ui.activity.PerfilPetPerdidoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PetPerdidoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PerfilPetFriendlyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.FeiraDoacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PerfilFeiraDoacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PerfilFeiraAdocaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PerfilPetshopActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activity.PerfilEncontroActivity"
             android:exported="false" />

@@ -7,37 +7,34 @@ import android.widget.ImageView
 import android.widget.TextView
 import br.iesb.mobile.petstop.R
 
-class PerfilEncontroActivity : AppCompatActivity() {
+class PerfilPetFriendlyActivity : AppCompatActivity() {
 
     private lateinit var campo_nome : TextView
     private lateinit var campo_local : TextView
-    private lateinit var campo_data : TextView
-    private lateinit var campo_lat : TextView
-    private lateinit var campo_long : TextView
     private lateinit var voltar : ImageView
+    private lateinit var latitude : TextView
+    private lateinit var longitude : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_perfil_encontro)
+        setContentView(R.layout.activity_perfil_pet_friendly)
 
-        voltar = findViewById(R.id.voltar_perfil_encontro)
+        voltar = findViewById(R.id.voltar_perfil_petfriendly)
 
         voltar.setOnClickListener{
-            var y = Intent(this, EncontroActivity::class.java)
+            var y = Intent(this, LocalPetFriendlyActivity::class.java)
             startActivity(y)
             finish()
         }
 
-        campo_data = findViewById(R.id.tv_data_perfil_encontro)
-        campo_nome = findViewById(R.id.tv_nome_perfil_encontro)
-        campo_local = findViewById(R.id.tv_endereco_perfil_encontro)
-        campo_lat = findViewById(R.id.tv_lat_perfil_enc)
-        campo_long = findViewById(R.id.tv_long_perfil_enc)
+        campo_nome = findViewById(R.id.tv_nome_perfil_petfriendly)
+        campo_local = findViewById(R.id.tv_local_perfil_petfriendly)
+        longitude = findViewById(R.id.tv_longitude_perfil_petfriendly)
+        latitude = findViewById(R.id.tv_latitude_perfil_petfriendly)
         campo_nome.setText(recuperarNome())
         campo_local.setText(recuperarLocal())
-        campo_data.setText(recuperarData())
-        campo_lat.setText(recuperarLat())
-        campo_long.setText(recuperarLong())
+        latitude.setText(recuperarLatitude())
+        longitude.setText(recuperarLongitude())
 
     }
 
@@ -53,17 +50,12 @@ class PerfilEncontroActivity : AppCompatActivity() {
         return local
     }
 
-    private fun recuperarData (): String? {
-        val data = intent.getStringExtra("data")
-        return data
-    }
-
-    private fun recuperarLat (): String? {
+    private fun recuperarLatitude (): String? {
         val lat = intent.getStringExtra("latitude")
         return lat
     }
 
-    private fun recuperarLong (): String? {
+    private fun recuperarLongitude (): String? {
         val long = intent.getStringExtra("longitude")
         return long
     }
