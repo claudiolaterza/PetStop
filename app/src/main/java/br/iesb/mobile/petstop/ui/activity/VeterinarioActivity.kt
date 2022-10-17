@@ -18,7 +18,8 @@ class VeterinarioActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var veterinarioRecyclerView: RecyclerView
     private lateinit var veterinarioArrayList : ArrayList<Veterinario>
-    lateinit var voltar : ImageView
+    private lateinit var voltar : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +34,16 @@ class VeterinarioActivity : AppCompatActivity() {
 
         voltar = findViewById(R.id.voltar_atv_veterinario)
 
+
         voltar.setOnClickListener{
             var a = Intent(this, MenuPrincipalActivity::class.java)
             startActivity(a)
+            finish()
+        }
+        add = findViewById(R.id.add_new_vet)
+        add.setOnClickListener{
+            var b = Intent(this, CriarVeterinarioActivity::class.java)
+            startActivity(b)
             finish()
         }
 

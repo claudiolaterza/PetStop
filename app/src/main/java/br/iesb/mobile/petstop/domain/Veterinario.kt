@@ -1,7 +1,7 @@
 package br.iesb.mobile.petstop.domain
 
 class Veterinario (
-    val id: Long? = null,
+    val id: String? = null,
     val endereco: String? = null,
     val name: String? = null,
     val cpf: String? = null,

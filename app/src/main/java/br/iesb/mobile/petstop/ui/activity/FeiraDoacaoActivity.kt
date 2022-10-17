@@ -18,6 +18,7 @@ class FeiraDoacaoActivity : AppCompatActivity() {
     private lateinit var feiraRecyclerView: RecyclerView
     private lateinit var feiraArrayList : ArrayList<FeiraDoacao>
     private lateinit var voltar_doac : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,14 @@ class FeiraDoacaoActivity : AppCompatActivity() {
             finish()
         }
 
-    }
+        add = findViewById(R.id.add_new_feiradoacao)
+
+        add.setOnClickListener{
+            var b = Intent(this, CriarFeiraDoacaoActivity::class.java)
+                startActivity(b)
+                finish()
+            }
+        }
 
     private fun getUserData(){
         dbref = FirebaseDatabase.getInstance().getReference("FeiraDoacao")

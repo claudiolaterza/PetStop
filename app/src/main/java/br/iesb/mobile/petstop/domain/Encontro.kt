@@ -1,7 +1,7 @@
 package br.iesb.mobile.petstop.domain
 
 class Encontro (
-    val id: Long? = null,
+    val id: String? = null,
     val latitude: String? = null,
     val local: String? = null,
     val longitude: String? = null,

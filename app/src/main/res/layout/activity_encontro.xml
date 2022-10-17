@@ -22,8 +22,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ac_encontro"
-        android:layout_width="405dp"
-        android:layout_height="634dp"
+        android:layout_width="402dp"
+        android:layout_height="602dp"
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,5 +48,17 @@
         app:layout_constraintTop_toBottomOf="@+id/rv_ac_encontro"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@drawable/voltar" />
+
+    <ImageView
+        android:id="@+id/add_new_encontro"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/rv_ac_encontro"
+        app:layout_constraintVertical_bias="0.64"
+        app:srcCompat="@drawable/adicionar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,8 @@ class EncontroActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var encontroRecyclerView: RecyclerView
     private lateinit var encontroArrayList : ArrayList<Encontro>
-    lateinit var voltar : ImageView
+    private lateinit var voltar : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,14 @@ class EncontroActivity : AppCompatActivity() {
             startActivity(a)
             finish()
         }
+
+        add = findViewById(R.id.add_new_encontro)
+
+        add.setOnClickListener {
+            var b = Intent(this, CriarEncontroActivity::class.java)
+            startActivity(b)
+            finish()
+        }
     }
 
     private fun getUserData(){ //Coletando dados do firebase
@@ -54,7 +63,6 @@ class EncontroActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-
             }
 
             override fun clickEncontro(encontro: Encontro) {
@@ -67,7 +75,6 @@ class EncontroActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-
         })
     }
 }

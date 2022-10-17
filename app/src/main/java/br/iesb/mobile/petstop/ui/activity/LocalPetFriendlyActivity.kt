@@ -20,6 +20,7 @@ class LocalPetFriendlyActivity : AppCompatActivity() {
     private lateinit var petfriendlyRecyclerView: RecyclerView
     private lateinit var petfriendlyArrayList : ArrayList<PetFriendly>
     private lateinit var voltar : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,13 @@ class LocalPetFriendlyActivity : AppCompatActivity() {
         voltar.setOnClickListener{
             var a = Intent(this, MenuComunidadeActivity::class.java)
             startActivity(a)
+            finish()
+        }
+
+        add = findViewById(R.id.add_new_petfriendly)
+        add.setOnClickListener{
+            var b = Intent(this, CriarPetfriendlyActivity::class.java)
+            startActivity(b)
             finish()
         }
     }

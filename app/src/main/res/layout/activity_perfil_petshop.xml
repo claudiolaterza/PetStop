@@ -25,11 +25,12 @@
         android:layout_height="69dp"
         android:layout_marginTop="36dp"
         android:hint="Endereço da Petshop"
+        android:shadowColor="@color/black"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
-        android:shadowColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tv_telefone_perfil_petshop" />
 
     <TextView
@@ -95,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/telefone_criar_petshop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefone"
@@ -108,7 +109,7 @@
         app:layout_constraintVertical_bias="0.689" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/ende_criar_petshop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Endereço"

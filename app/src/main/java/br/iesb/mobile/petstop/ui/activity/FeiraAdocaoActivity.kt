@@ -17,7 +17,9 @@ class FeiraAdocaoActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var feiraRecyclerView: RecyclerView
     private lateinit var feiraArrayList : ArrayList<FeiraAdocao>
+
     private lateinit var voltar : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,13 @@ class FeiraAdocaoActivity : AppCompatActivity() {
             finish()
         }
 
+        add = findViewById(R.id.add_new_feiraadocao)
+
+        add.setOnClickListener{
+            var a = Intent(this, CriarFeiraAdocaoActivity::class.java)
+            startActivity(a)
+            finish()
+        }
     }
 
     private fun getUserData(){

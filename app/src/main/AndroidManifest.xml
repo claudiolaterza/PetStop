@@ -17,7 +17,27 @@
         android:roundIcon="@drawable/placa_com_pata"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetStop">
-
+        <activity
+            android:name=".ui.activity.CriarPetfriendlyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarVeterinarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarPetPerdidoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarFeiraDoacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarFeiraAdocaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarEncontroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CriarPetShopActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activity.PerfilPetPerdidoActivity"
             android:exported="false" />

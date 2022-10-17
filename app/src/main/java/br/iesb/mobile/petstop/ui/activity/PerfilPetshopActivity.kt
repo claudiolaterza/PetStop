@@ -45,27 +45,27 @@ class PerfilPetshopActivity : AppCompatActivity() {
     private fun recuperarNome (): String? {
 
         val nome = intent.getStringExtra("nome")
-        return nome
+        return nome.toString()
     }
 
     private fun recuperarLocal (): String? {
 
         val local = intent.getStringExtra("local")
-        return local
+        return local.toString()
     }
 
     private fun recuperarTelefone (): String? {
         val telefone = intent.getStringExtra("telefone")
-        return telefone
+        return telefone.toString()
     }
 
     private fun recuperarLatitude (): String? {
         val lat = intent.getStringExtra("latitude")
-        return lat
+        return lat.toString()
     }
 
     private fun recuperarLongitude (): String? {
         val long = intent.getStringExtra("longitude")
-        return long
+        return long.toString()
     }
 }

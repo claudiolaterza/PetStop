@@ -1,7 +1,7 @@
 package br.iesb.mobile.petstop.domain
 
 class PetPerdido(
-    val id: Long? = null,
+    val id: String? = null,
     val name: String? = null,
     val raca: String? = null,
     val idade: String? = null,

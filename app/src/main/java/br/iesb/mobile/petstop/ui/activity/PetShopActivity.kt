@@ -3,8 +3,8 @@ package br.iesb.mobile.petstop.ui.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.iesb.mobile.petstop.R
@@ -17,7 +17,8 @@ class PetShopActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var petshopRecyclerView: RecyclerView
     private lateinit var petshopArrayList: ArrayList<Petshop>
-    lateinit var voltar : ImageView
+    private lateinit var voltar : ImageView
+    private lateinit var bt : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,13 @@ class PetShopActivity : AppCompatActivity() {
         getUserData()
 
         voltar = findViewById(R.id.voltar_atv_petshop)
+        bt = findViewById(R.id.add_petshop)
+
+        bt.setOnClickListener{
+            var b = Intent(this, CriarPetShopActivity::class.java)
+            startActivity(b)
+            finish()
+        }
 
         voltar.setOnClickListener{
             var a = Intent(this, MenuPrincipalActivity::class.java)

@@ -1,6 +1,7 @@
 package br.iesb.mobile.petstop.ui.activity
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -16,7 +17,8 @@ class PetPerdidoActivity : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var petperdidoRecyclerView: RecyclerView
     private lateinit var petperdidoArrayList: ArrayList<PetPerdido>
-    lateinit var voltar : ImageView
+    private lateinit var voltar : ImageView
+    private lateinit var add : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,14 @@ class PetPerdidoActivity : AppCompatActivity() {
             startActivity(a)
             finish()
         }
+
+        add = findViewById(R.id.add_new_petperdido)
+        add.setOnClickListener{
+            var b = Intent(this, CriarPetPerdidoActivity::class.java)
+            startActivity(b)
+            finish()
+        }
+
     }
 
     private fun getUserData(){
