@@ -6,6 +6,12 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import br.iesb.mobile.petstop.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 
 class PerfilEncontroActivity : AppCompatActivity() {
 
@@ -39,6 +45,26 @@ class PerfilEncontroActivity : AppCompatActivity() {
         campo_lat.setText(recuperarLat())
         campo_long.setText(recuperarLong())
 
+        var lati : Double
+        var longe : Double
+
+        lati = campo_lat.text.toString().toDouble()
+        longe = campo_long.text.toString().toDouble()
+
+        val pos : LatLng
+        pos = LatLng(lati,longe)
+
+
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapa_encontro) as SupportMapFragment
+        mapFragment.getMapAsync{ googleMap ->
+            googleMap.addMarker(
+                MarkerOptions()
+                    .title(campo_nome.text.toString())
+                    .snippet(campo_local.text.toString())
+                    .position(pos)
+            )
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, 13f))
+        }
     }
 
     private fun recuperarNome (): String? {

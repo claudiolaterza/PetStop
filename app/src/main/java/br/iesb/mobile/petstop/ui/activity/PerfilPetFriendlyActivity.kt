@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import br.iesb.mobile.petstop.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 class PerfilPetFriendlyActivity : AppCompatActivity() {
 
@@ -36,6 +40,26 @@ class PerfilPetFriendlyActivity : AppCompatActivity() {
         latitude.setText(recuperarLatitude())
         longitude.setText(recuperarLongitude())
 
+        var lati : Double
+        var longe : Double
+
+        lati = latitude.text.toString().toDouble()
+        longe = longitude.text.toString().toDouble()
+
+        val pos : LatLng
+        pos = LatLng(lati,longe)
+
+
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapa_petfriendly) as SupportMapFragment
+        mapFragment.getMapAsync{ googleMap ->
+            googleMap.addMarker(
+                MarkerOptions()
+                    .title(campo_nome.text.toString())
+                    .snippet(campo_local.text.toString())
+                    .position(pos)
+            )
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, 13f))
+        }
     }
 
     private fun recuperarNome (): String? {

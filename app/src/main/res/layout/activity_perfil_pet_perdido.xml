@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.PerfilPetPerdidoActivity">
 
+    <fragment
+        android:id="@+id/mapa_pet_perdido"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="298dp"
+        android:layout_height="237dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nome_perfil_petperdido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
     <TextView
         android:id="@+id/tv_nome_perfil_petperdido"
         android:layout_width="369dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="416dp"
+        android:layout_marginBottom="384dp"
         android:hint="Nome do PetPerdido"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -74,7 +86,7 @@
         android:id="@+id/voltar_perfil_petperdido"
         android:layout_width="69dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
@@ -82,15 +94,16 @@
         app:srcCompat="@drawable/voltar" />
 
     <TextView
+        android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Nome"
         android:textColor="#939090"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_nome_perfil_petperdido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -123,11 +136,11 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Raça"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_local_perfil_petperdido" />
 
@@ -135,13 +148,13 @@
         android:id="@+id/raca_perfil_petperdido"
         android:layout_width="363dp"
         android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:hint="Raça do pet"
         android:shadowColor="@color/black"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 

@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.PerfilFeiraAdocaoActivity">
 
+    <fragment
+        android:id="@+id/mapa_feiraadocao"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="324dp"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_nome_perfil_feiraadocao"
         android:layout_width="369dp"
@@ -63,12 +73,12 @@
         android:id="@+id/tv_longitude_perfil_feiraadocao"
         android:layout_width="366dp"
         android:layout_height="67dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="48dp"
         android:hint="Longitude"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_feiraadocao" />
 
@@ -84,6 +94,7 @@
         app:srcCompat="@drawable/voltar" />
 
     <TextView
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -96,7 +107,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/telefone_criar_petshop"
+        android:id="@+id/data_perfil_feiraadocao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data"
@@ -109,7 +120,7 @@
         app:layout_constraintVertical_bias="0.689" />
 
     <TextView
-        android:id="@+id/ende_criar_petshop"
+        android:id="@+id/ende_perfil_feiraadocao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Endereço"

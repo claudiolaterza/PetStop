@@ -7,6 +7,16 @@
     android:visibility="visible"
     tools:context=".ui.activity.PerfilEncontroActivity">
 
+    <fragment
+        android:id="@+id/mapa_encontro"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="324dp"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_nome_perfil_encontro"
         android:layout_width="369dp"
@@ -59,6 +69,7 @@
         app:srcCompat="@drawable/voltar" />
 
     <TextView
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

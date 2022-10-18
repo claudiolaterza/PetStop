@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/textMessageSend"
-        android:layout_width="49dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="324dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/user_message"

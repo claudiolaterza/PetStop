@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.LocalPetFriendlyActivity">
 
+    <fragment
+        android:id="@+id/mapa_petfriendly"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="324dp"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_nome_perfil_petfriendly"
         android:layout_width="369dp"
@@ -70,6 +80,7 @@
         app:srcCompat="@drawable/voltar" />
 
     <TextView
+        android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
