@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_cadastro.xml" value="0.2" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_criar_encontro.xml" value="0.25" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_criar_feira_adocao.xml" value="0.25" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_criar_feira_doacao.xml" value="0.2359375" />
@@ -15,7 +15,7 @@
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_encontros_maps.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_feira_adocao.xml" value="0.2359375" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_feira_doacao.xml" value="0.25" />
-        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_forgot.xml" value="0.3625" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_forgot.xml" value="0.176" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_gerar_qrcode.xml" value="0.45368620037807184" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_ler_qrcode.xml" value="0.67" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_local_pet_friendly.xml" value="0.264" />
@@ -32,7 +32,7 @@
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_perfil_veterinario.xml" value="0.152" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_pet_perdido.xml" value="0.2" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_pet_shop.xml" value="0.18425925925925926" />
-        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_qrcode.xml" value="0.3625" />
+        <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_qrcode.xml" value="0.264" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_suporte_tecnico.xml" value="0.264" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/activity_veterinario.xml" value="0.264" />
         <entry key="..\:/Users/claud/AndroidStudioProjects/PetStop/app/src/main/res/layout/bot_message_layout.xml" value="0.35625" />

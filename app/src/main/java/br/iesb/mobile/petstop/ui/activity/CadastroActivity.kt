@@ -9,32 +9,45 @@ import android.widget.*
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.databinding.ActivityCadastroBinding
 import br.iesb.mobile.petstop.databinding.ActivityLoginBinding
+import br.iesb.mobile.petstop.domain.Petshop
 import br.iesb.mobile.petstop.domain.Usuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 class CadastroActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCadastroBinding
     private var auth = FirebaseAuth.getInstance()
-    lateinit var voltar : Button
-    lateinit var nome : EditText
-    lateinit var cpf : EditText
-    lateinit var tel : EditText
-    lateinit var conf_pass : EditText
+    private lateinit var voltar : Button
+    private lateinit var nome : EditText
+    private lateinit var cpf : EditText
+    private lateinit var tel : EditText
+    private lateinit var conf_pass : EditText
+    private lateinit var senha : EditText
+    private lateinit var email : EditText
+    private lateinit var dbref : DatabaseReference
+    private lateinit var cadastrar : ImageView
+    private lateinit var cadastro : TextView
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        binding = ActivityCadastroBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_cadastro)
 
         voltar = findViewById(R.id.bt_actv_voltar_cadastro)
         nome = findViewById(R.id.atv_nome_usu_cadastro)
         cpf = findViewById(R.id.atv_cpf_cadastro)
         tel = findViewById(R.id.atv_et_telefone_cadastro)
         conf_pass = findViewById(R.id.atv_et_confirm_pass_cadastro)
+        senha = findViewById(R.id.atv_et_pass_cadastro)
+        email = findViewById(R.id.atv_et_email_cadastro)
+        cadastrar = findViewById(R.id.atv_bt_cadastrar)
+        cadastro = findViewById(R.id.atv_bt_cadastro)
 
+        val user = Firebase.auth.currentUser
+        val id = user.uid
 
         voltar.setOnClickListener{
             var x = Intent(this, LoginActivity::class.java)
@@ -42,58 +55,73 @@ class CadastroActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.atvBtCadastrar.setOnClickListener(){view ->
-            val email = binding.atvEtEmailCadastro.text.toString()
-            val senha = binding.atvEtPassCadastro.text.toString()
+        cadastrar.setOnClickListener(){
+            val em = email.text.toString()
+            val se = senha.text.toString()
+            val cs = conf_pass.text.toString()
+            val cp = cpf.text.toString()
+            val te = tel.text.toString()
+            val no = nome.text.toString()
 
-            if(email.isEmpty() || senha.isEmpty() || nome.text.toString().isEmpty() || cpf.text.toString().isEmpty() || tel.text.toString().isEmpty() || conf_pass.text.toString().isEmpty()){
+            if(em.isEmpty() || se.isEmpty() || cs.isEmpty() || cp.isEmpty() || te.isEmpty() || no.isEmpty()){
                 Toast.makeText(this, "Certifique-se de preencher todos os campos", Toast.LENGTH_LONG).show()
-            }else{
-                auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener{ task ->
+            }else if (se != cs) {
+                Toast.makeText(this, "As senhas não coincidem!", Toast.LENGTH_LONG)
+                    .show()
+            }else if(se.length < 6 || cs.length <6){
+                Toast.makeText(this, "A senha deve ter pelo menos 6 caracteres!", Toast.LENGTH_LONG).show()
+            } else{
+                auth.createUserWithEmailAndPassword(em, se).addOnCompleteListener{ task ->
                     if(task.isSuccessful){
                         Toast.makeText(this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show()
-                        binding.atvEtEmailCadastro.setText("")
-                        binding.atvEtPassCadastro.setText("")
+                        criarUsuario(cp, em, id, no,te)
                         var a = Intent(this, LoginActivity::class.java)
                         startActivity(a)
                         finish()
                     }
                 }.addOnFailureListener{
-
+                    Toast.makeText(this, "Digite um email válido!", Toast.LENGTH_LONG).show()
                 }
             }
         }
 
-        binding.atvBtCadastro.setOnClickListener(){view ->
-            val email = binding.atvEtEmailCadastro.text.toString()
-            val senha = binding.atvEtPassCadastro.text.toString()
+        cadastro.setOnClickListener(){
+            val em = email.text.toString()
+            val se = senha.text.toString()
+            val cs = conf_pass.text.toString()
+            val cp = cpf.text.toString()
+            val te = tel.text.toString()
+            val no = nome.text.toString()
 
-            if(email.isEmpty() || senha.isEmpty() || nome.text.toString().isEmpty() || cpf.text.toString().isEmpty() || tel.text.toString().isEmpty() || conf_pass.text.toString().isEmpty()){
+            if(em.isEmpty() || se.isEmpty() || cs.isEmpty() || cp.isEmpty() || te.isEmpty() || no.isEmpty()){
                 Toast.makeText(this, "Certifique-se de preencher todos os campos", Toast.LENGTH_LONG).show()
-            }else{
-                auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener{ task ->
+            }else if (se != cs) {
+                Toast.makeText(this, "As senhas não coincidem!", Toast.LENGTH_LONG)
+                    .show()
+            }else if(se.length < 6 || cs.length <6){
+                Toast.makeText(this, "A senha deve ter pelo menos 6 caracteres!", Toast.LENGTH_LONG).show()
+            } else{
+                auth.createUserWithEmailAndPassword(em, se).addOnCompleteListener{ task ->
                     if(task.isSuccessful){
                         Toast.makeText(this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show()
-                        binding.atvEtEmailCadastro.setText("")
-                        binding.atvEtPassCadastro.setText("")
+                        criarUsuario(cp, em, id, no,te)
                         var a = Intent(this, LoginActivity::class.java)
                         startActivity(a)
                         finish()
                     }
                 }.addOnFailureListener{
-                    if(senha !== conf_pass.text.toString()) {
-                        Toast.makeText(this, "Os capos de senha não coincidem!", Toast.LENGTH_LONG)
-                            .show()
-                    } else if(senha.length < 6 || conf_pass.text.toString().length <6){
-                        Toast.makeText(this, "A senha deve ter pelo menos 6 caracteres!", Toast.LENGTH_LONG).show()
-                    } else{
-                        Toast.makeText(this, "O e-mail já está sendo utilizado!", Toast.LENGTH_LONG).show()
-                    }
+                    Toast.makeText(this, "Digite um email válido!", Toast.LENGTH_LONG).show()
                 }
             }
         }
 
 
+    }
+
+    fun criarUsuario(cpf : String, email : String, id : String, name : String, cel : String){
+        dbref = FirebaseDatabase.getInstance().getReference("Usuários")
+        val user = Usuario(id, name, cpf, cel, email)
+        dbref.child(id.toString()).setValue(user)
     }
 
 }

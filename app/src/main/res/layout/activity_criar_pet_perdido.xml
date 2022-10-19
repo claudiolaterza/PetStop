@@ -23,12 +23,14 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="387dp"
-        android:layout_height="563dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/voltar_criar_petperdido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25">
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -183,7 +185,7 @@
                 android:layout_height="68dp"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a latitude"
-                android:inputType="number"
+                android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -191,7 +193,7 @@
                 android:id="@+id/tv_longitude_criar_petperdido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Digite a latitude no Google Maps"
+                android:text="Digite a longitude no Google Maps"
                 android:textSize="20sp" />
 
             <EditText
@@ -199,8 +201,8 @@
                 android:layout_width="346dp"
                 android:layout_height="68dp"
                 android:layout_marginTop="8dp"
-                android:hint="Digite a latitude"
-                android:inputType="number"
+                android:hint="Digite a longitude"
+                android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 

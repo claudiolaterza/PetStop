@@ -30,16 +30,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_nome_veterinario_actv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Arya"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_nome_veterinario_actv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Arya"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,16 +55,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_pet_veterinario_actv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Petshop AmigoSeu"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pet_veterinario_actv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Petshop AmigoSeu"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,21 +73,12 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="304dp"
                 android:layout_height="wrap_content"
                 android:text="Atende em casa:"
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_domicilio_veterinario_actv"
-                android:layout_width="99dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Sim"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
 
             <ImageView
                 android:layout_width="40dp"
@@ -95,6 +86,15 @@
                 app:srcCompat="@drawable/detalhar" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_domicilio_veterinario_actv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Sim"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -110,16 +110,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_telefone_veterinario_actv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="(61) 99999-9999"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_telefone_veterinario_actv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="(61) 99999-9999"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView

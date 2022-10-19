@@ -34,7 +34,7 @@ class PetPerdidoActivity : AppCompatActivity() {
         voltar = findViewById(R.id.voltar_atv_petperdido)
 
         voltar.setOnClickListener{
-            var a = Intent(this, MenuPrincipalActivity::class.java)
+            var a = Intent(this, MenuComunidadeActivity::class.java)
             startActivity(a)
             finish()
         }

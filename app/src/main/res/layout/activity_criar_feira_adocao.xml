@@ -23,8 +23,10 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="387dp"
-        android:layout_height="563dp"
-        app:layout_constraintBottom_toTopOf="@+id/voltar_criar_feiraadocao"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_feira_adocao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +47,8 @@
 
             <EditText
                 android:id="@+id/et_nome_criar_feiraadocao"
-                android:layout_width="310dp"
-                android:layout_height="59dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Nome da Feira de Adoção"
                 android:textColor="#000000"
@@ -61,8 +63,8 @@
 
             <EditText
                 android:id="@+id/et_data_criar_feiraadocao"
-                android:layout_width="346dp"
-                android:layout_height="68dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a data da feira"
                 android:inputType="datetime"
@@ -78,8 +80,8 @@
 
             <EditText
                 android:id="@+id/et_endereco_criar_feiraadocao"
-                android:layout_width="346dp"
-                android:layout_height="68dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite o endereço"
                 android:textColor="#000000"
@@ -94,11 +96,11 @@
 
             <EditText
                 android:id="@+id/et_latitude_criar_feiraadocao"
-                android:layout_width="346dp"
-                android:layout_height="68dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a latitude"
-                android:inputType="number"
+                android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -111,11 +113,11 @@
 
             <EditText
                 android:id="@+id/et_longitude_criar_feiraadocao"
-                android:layout_width="346dp"
-                android:layout_height="68dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a longitude"
-                android:inputType="number"
+                android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 

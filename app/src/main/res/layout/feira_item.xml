@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/tv_nome_feira_adoc_actv"
-            android:layout_width="324dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Arya"
@@ -63,7 +63,7 @@
 
         <TextView
             android:id="@+id/tv_end_feira_adoc_actv"
-            android:layout_width="327dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Stark"
@@ -88,7 +88,7 @@
 
         <TextView
             android:id="@+id/tv_data_feira_adoc_actv"
-            android:layout_width="329dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="20"

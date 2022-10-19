@@ -9,8 +9,8 @@ import br.iesb.mobile.petstop.R
 
 class QRCodeActivity : AppCompatActivity() {
     lateinit var voltar : ImageView
-    lateinit var gerar : Button
-    lateinit var ler : Button
+    lateinit var gerar : ImageView
+    lateinit var ler : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qrcode)

@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/tv_nome_encontro_actv"
-            android:layout_width="275dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Arya"
@@ -65,7 +65,7 @@
 
         <TextView
             android:id="@+id/tv_data_encontro_actv"
-            android:layout_width="220dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="20"
@@ -90,7 +90,7 @@
 
         <TextView
             android:id="@+id/tv_end_encontro_actv"
-            android:layout_width="291dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="20"
@@ -99,15 +99,15 @@
 
         <TextView
             android:id="@+id/tv_lat_enc_actv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="TextView"
             android:visibility="invisible" />
 
         <TextView
             android:id="@+id/tv_long_enc_actv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="TextView"
             android:visibility="invisible" />
     </LinearLayout>
