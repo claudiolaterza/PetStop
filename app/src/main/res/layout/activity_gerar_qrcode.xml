@@ -38,6 +38,7 @@
         android:layout_marginBottom="92dp"
         android:background="@null"
         android:hint="Digite a idade do pet"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/btnGenerateQRcode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

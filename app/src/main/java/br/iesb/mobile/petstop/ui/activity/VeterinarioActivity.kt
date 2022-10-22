@@ -69,12 +69,24 @@ class VeterinarioActivity : AppCompatActivity() {
             }
 
             override fun clickVeterinario(veterinario: Veterinario) {
-               val intent = Intent(this@VeterinarioActivity, PerfilVeterinarioActivity::class.java)
+                val intent = Intent(this@VeterinarioActivity, PerfilVeterinarioActivity::class.java)
                 intent.putExtra("nome", veterinario.name)
                 intent.putExtra("domicilio", veterinario.domicilio)
                 intent.putExtra("local", veterinario.endereco)
                 intent.putExtra("telefone", veterinario.telefone)
                 intent.putExtra("curriculo", veterinario.curriculo)
+                intent.putExtra("anestesia", veterinario.anestesia)
+                intent.putExtra("cardiologia", veterinario.cardiologia)
+                intent.putExtra("cirurgia", veterinario.cirurgia)
+                intent.putExtra("clinica", veterinario.clinica)
+                intent.putExtra("dermatologia", veterinario.dermatologia)
+                intent.putExtra("endocrinologia", veterinario.endocrinologia)
+                intent.putExtra("neurologia", veterinario.neurologia)
+                intent.putExtra("nutricao", veterinario.nutricao)
+                intent.putExtra("nefro_uro", veterinario.nefro_uro)
+                intent.putExtra("odonto", veterinario.odonto)
+                intent.putExtra("oftalmo", veterinario.oftalmo)
+                intent.putExtra("ortopedia", veterinario.ortopedia)
                 startActivity(intent)
                 finish()
             }

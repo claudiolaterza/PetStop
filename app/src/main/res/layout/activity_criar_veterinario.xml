@@ -118,32 +118,130 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite o endereço"
+
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tv_latitude_criar_veterinario"
-                android:layout_width="wrap_content"
+
+            <CheckBox
+                android:id="@+id/et_domicilio_criar_veterinario1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Atende clientes em domicílio?"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_domicilio_criar_veterinario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="Digite SIM ou NÃO"
-                android:inputType="text"
-                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tv_longitude_criar_veterinario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Escreva algumas informações curriculares"
+                android:layout_marginTop="10dp"
+                android:text="Especialidades"
                 android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/anestesia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Anestesiologia" />
+
+                <CheckBox
+                    android:id="@+id/cardiologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Cardiologia" />
+
+                <CheckBox
+                    android:id="@+id/cirurgia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cirurgia" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/clinica_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Clínica Médica" />
+
+                <CheckBox
+                    android:id="@+id/dermatologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Dermatologia" />
+
+                <CheckBox
+                    android:id="@+id/endocrinologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Endocrinologia" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/neurologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Neurologia" />
+
+                <CheckBox
+                    android:id="@+id/nutricao_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Nutrição" />
+
+                <CheckBox
+                    android:id="@+id/nefro_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nefrologia e Urologia" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/odontologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Odontologia" />
+
+                <CheckBox
+                    android:id="@+id/oftalmologia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Oftalmologia" />
+
+                <CheckBox
+                    android:id="@+id/ortopedia_criar_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ortopedia" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/et_currículo_criar_veterinario"
