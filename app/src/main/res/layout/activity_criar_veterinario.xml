@@ -118,7 +118,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Digite o endereço"
-
                 android:textColor="#000000"
                 android:textSize="24sp" />
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import br.com.receitasdecodigo.utils.MaskEditUtil
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.Encontro
 import com.google.firebase.auth.ktx.auth
@@ -29,6 +30,9 @@ class CriarEncontroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_criar_encontro)
+
+        data = findViewById(R.id.et_data_criar_encontro)
+        data.addTextChangedListener(MaskEditUtil.mask(data, MaskEditUtil.FORMAT_DATE));
 
         voltar = findViewById(R.id.voltar_criar_encontro)
 

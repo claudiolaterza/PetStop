@@ -71,6 +71,13 @@ class PetShopActivity : AppCompatActivity() {
                 intent.putExtra("telefone", petshop.telefone)
                 intent.putExtra("latitude", petshop.lat)
                 intent.putExtra("longitude", petshop.long)
+                intent.putExtra("venda_produtos", petshop.venda_produtos)
+                intent.putExtra("banho", petshop.banho)
+                intent.putExtra("tosa", petshop.tosa)
+                intent.putExtra("serv_veterinario", petshop.serv_veteterinaio)
+                intent.putExtra("exame", petshop.exame)
+                intent.putExtra("internacao", petshop.internacao)
+                intent.putExtra("atendimento_24h", petshop.atendimento_24h)
                 startActivity(intent)
                 finish()
             }

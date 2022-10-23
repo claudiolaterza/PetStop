@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import br.com.receitasdecodigo.utils.MaskEditUtil
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.Veterinario
 import com.google.firebase.auth.ktx.auth
@@ -55,6 +56,11 @@ class CriarVeterinarioActivity : AppCompatActivity() {
         val id = user.uid
 
         confirma = findViewById(R.id.add_veterinario)
+        cpf = findViewById(R.id.et_cpf_criar_veterinario)
+        cpf.addTextChangedListener(MaskEditUtil.mask(cpf, MaskEditUtil.FORMAT_CPF));
+
+        telefone = findViewById(R.id.et_telefone_criar_veterinario)
+        telefone.addTextChangedListener(MaskEditUtil.mask(telefone, MaskEditUtil.FORMAT_FONE))
 
         confirma.setOnClickListener{
 
@@ -80,10 +86,10 @@ class CriarVeterinarioActivity : AppCompatActivity() {
             oftalmo = findViewById(R.id.oftalmologia_criar_vet)
             ortopedia = findViewById(R.id.ortopedia_criar_vet)
 
+
+
             val dom : String
             dom = check_to_string2(domicilio)
-
-
 
             val ane : String
             ane = check_to_string(anestesia)

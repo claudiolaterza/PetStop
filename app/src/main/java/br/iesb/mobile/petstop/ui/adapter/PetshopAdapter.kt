@@ -22,6 +22,13 @@ class PetshopAdapter (var petshops: List<Petshop>, var clickPetshop: ClickPetsho
          val telefone: TextView = itemView.tv_tel_petshop_actv;
          val latitude: TextView = itemView.tv_lat_petshop_actv;
          val longitude: TextView = itemView.tv_long_petshop_actv;
+        val venda_produtos: TextView = itemView.tv_venda_prod_item_petshop
+        val banho: TextView = itemView.tv_banho_item_petshop
+        val tosa: TextView = itemView.tv_tosa_item_petshop
+        val serv_veterinario: TextView = itemView.tv_serv_veterinario_item_petshop
+        val exames: TextView = itemView.tv_exames_item_petshop
+        val internacao: TextView = itemView.tv_internacao_item_petshop
+        val atendimento_24h: TextView = itemView.tv_atendimento24h_item_petshop
          val cardView = itemView.card_petshop
     }
 
@@ -47,6 +54,15 @@ class PetshopAdapter (var petshops: List<Petshop>, var clickPetshop: ClickPetsho
         holder.telefone.text = petshop.telefone.toString()
         holder.latitude.text = petshop.lat.toString()
         holder.longitude.text = petshop.long.toString()
+
+        holder.venda_produtos.text = petshop.venda_produtos.toString()
+        holder.banho.text = petshop.banho.toString()
+        holder.tosa.text = petshop.tosa.toString()
+        holder.serv_veterinario.text = petshop.serv_veteterinaio.toString()
+        holder.exames.text = petshop.exame.toString()
+        holder.internacao.text = petshop.internacao.toString()
+        holder.atendimento_24h.text = petshop.atendimento_24h.toString()
+
         holder.cardView.setOnClickListener{
             clickPetshop.clickPetshop(petshop)
         }

@@ -9,78 +9,175 @@
     <fragment
         android:id="@+id/mapa_petshop"
         class="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="324dp"
+        android:layout_width="387dp"
         android:layout_height="290dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView29"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_nome_perfil_petshop"
-        android:layout_width="369dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="264dp"
-        android:hint="Nome do Petshop"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_local_perfil_petshop"
-        android:layout_width="363dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="36dp"
-        android:hint="Endereço da Petshop"
-        android:shadowColor="@color/black"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_telefone_perfil_petshop" />
-
-    <TextView
-        android:id="@+id/tv_telefone_perfil_petshop"
-        android:layout_width="366dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="48dp"
-        android:hint="Telefone"
-        android:textColor="#000000"
-        android:textSize="24sp"
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="387dp"
+        android:layout_height="315dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_petshop" />
+        app:layout_constraintTop_toBottomOf="@+id/mapa_petshop">
 
-    <TextView
-        android:id="@+id/tv_latitude_perfil_petshop"
-        android:layout_width="366dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="212dp"
-        android:hint="Latitude"
-        android:textSize="24sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_petshop" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="363dp"
+            android:layout_height="607dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_longitude_perfil_petshop"
-        android:layout_width="366dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="192dp"
-        android:hint="Longitude"
-        android:textSize="24sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_petshop" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nome"
+                android:textColor="#939090"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_nome_perfil_petshop"
+                android:layout_width="369dp"
+                android:layout_height="61dp"
+                android:hint="Nome do Petshop"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/ende_criar_petshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Endereço"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_local_perfil_petshop"
+                android:layout_width="363dp"
+                android:layout_height="69dp"
+
+                android:hint="Endereço da Petshop"
+                android:shadowColor="@color/black"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/telefone_criar_petshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefone"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_telefone_perfil_petshop"
+                android:layout_width="366dp"
+                android:layout_height="67dp"
+                android:hint="Telefone"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+
+
+            <TextView
+                android:id="@+id/tv_longitude_perfil_petshop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="Longitude"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_latitude_perfil_petshop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="Latitude"
+                android:visibility="invisible" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/serv_banho_perfil"
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Banho" />
+
+                    <CheckBox
+                        android:id="@+id/serv_atendimento24_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Atendimento 24h" />
+
+                    <CheckBox
+                        android:id="@+id/serv_tosa_perfil"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Tosa" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/serv_veterinario_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Veterinário" />
+
+                    <CheckBox
+                        android:id="@+id/serv_exame_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Exames" />
+
+                    <CheckBox
+                        android:id="@+id/serv_internacao_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Internação" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/serv_venda_produtos_perfil"
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Venda de Produtos" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <ImageView
         android:id="@+id/voltar_perfil_petshop"
@@ -91,45 +188,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline19"
         app:srcCompat="@drawable/voltar" />
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Nome"
-        android:textColor="#939090"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nome_perfil_petshop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/telefone_criar_petshop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Telefone"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_telefone_perfil_petshop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome_perfil_petshop"
-        app:layout_constraintVertical_bias="0.689" />
 
-    <TextView
-        android:id="@+id/ende_criar_petshop"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Endereço"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_local_perfil_petshop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_telefone_perfil_petshop"
-        app:layout_constraintVertical_bias="0.611" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="652dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

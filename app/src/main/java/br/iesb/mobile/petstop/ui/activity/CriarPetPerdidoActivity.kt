@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import br.com.receitasdecodigo.utils.MaskEditUtil
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.PetPerdido
 import br.iesb.mobile.petstop.domain.Petshop
@@ -42,6 +43,12 @@ class CriarPetPerdidoActivity : AppCompatActivity() {
             startActivity(y)
             finish()
         }
+
+        telefone = findViewById(R.id.et_telefone_criar_petperdido)
+        data = findViewById(R.id.et_data_criar_petperdido)
+        telefone.addTextChangedListener(MaskEditUtil.mask(telefone, MaskEditUtil.FORMAT_FONE));
+        data.addTextChangedListener(MaskEditUtil.mask(data, MaskEditUtil.FORMAT_DATE));
+
 
         val user = Firebase.auth.currentUser
         val id = user.uid

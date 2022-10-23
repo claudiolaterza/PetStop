@@ -6,6 +6,7 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import br.com.receitasdecodigo.utils.MaskEditUtil
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.databinding.ActivityCadastroBinding
 import br.iesb.mobile.petstop.databinding.ActivityLoginBinding
@@ -45,6 +46,10 @@ class CadastroActivity : AppCompatActivity() {
         email = findViewById(R.id.atv_et_email_cadastro)
         cadastrar = findViewById(R.id.atv_bt_cadastrar)
         cadastro = findViewById(R.id.atv_bt_cadastro)
+
+        cpf.addTextChangedListener(MaskEditUtil.mask(cpf, MaskEditUtil.FORMAT_CPF));
+        tel.addTextChangedListener(MaskEditUtil.mask(tel, MaskEditUtil.FORMAT_FONE));
+
 
         val user = Firebase.auth.currentUser
         val id = user.uid

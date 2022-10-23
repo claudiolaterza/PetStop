@@ -22,15 +22,15 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="545dp"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/voltar_criar_petshop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25">
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintVertical_bias="0.133">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,6 +58,7 @@
                 android:id="@+id/tv_cnpj_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="CNPJ"
                 android:textSize="20sp" />
 
@@ -65,7 +66,6 @@
                 android:id="@+id/et_cnpj_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:hint="Digite o CNPJ"
                 android:inputType="number"
                 android:textColor="#000000"
@@ -92,6 +92,7 @@
                 android:id="@+id/tv_email_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="E-mail"
                 android:textSize="20sp" />
 
@@ -99,7 +100,7 @@
                 android:id="@+id/et_email_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:hint="@string/HintEmail"
                 android:inputType="textWebEmailAddress"
                 android:textColor="#000000"
@@ -109,6 +110,7 @@
                 android:id="@+id/tv_endereco_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Endereço"
                 android:textSize="20sp" />
 
@@ -125,6 +127,7 @@
                 android:id="@+id/tv_latitude_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Digite a latitude no Google Maps"
                 android:textSize="20sp" />
 
@@ -149,11 +152,84 @@
                 android:id="@+id/et_longitude_criar_petshop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:hint="Digite a longitude"
                 android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/serv_banho_criar"
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Banho" />
+
+                    <CheckBox
+                        android:id="@+id/serv_atendimento24_criar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Atendimento 24h" />
+
+                    <CheckBox
+                        android:id="@+id/serv_tosa_criar"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Tosa" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/serv_veterinario_criar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Veterinário" />
+
+                    <CheckBox
+                        android:id="@+id/serv_exame_criar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Exames" />
+
+                    <CheckBox
+                        android:id="@+id/serv_internacao_criar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Internação" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/serv_venda_produtos_criar"
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="Venda de Produtos" />
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
     </ScrollView>

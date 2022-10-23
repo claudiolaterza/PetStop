@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import br.iesb.mobile.petstop.R
@@ -21,6 +22,14 @@ class PerfilPetshopActivity : AppCompatActivity() {
     private lateinit var voltar : ImageView
     private lateinit var latitude : TextView
     private lateinit var longitude : TextView
+
+    private lateinit var venda_produtos : CheckBox
+    private lateinit var banho : CheckBox
+    private lateinit var tosa : CheckBox
+    private lateinit var serv_veterinario : CheckBox
+    private lateinit var exames : CheckBox
+    private lateinit var internacao : CheckBox
+    private lateinit var atendimento_24h : CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +54,24 @@ class PerfilPetshopActivity : AppCompatActivity() {
         campo_telefone.setText(recuperarTelefone())
         latitude.setText(recuperarLatitude())
         longitude.setText(recuperarLongitude())
+
+        venda_produtos = findViewById(R.id.serv_venda_produtos_perfil)
+        banho = findViewById(R.id.serv_banho_perfil)
+        tosa = findViewById(R.id.serv_tosa_perfil)
+        serv_veterinario = findViewById(R.id.serv_veterinario_perfil)
+        exames = findViewById(R.id.serv_exame_perfil)
+        internacao = findViewById(R.id.serv_internacao_perfil)
+        atendimento_24h = findViewById(R.id.serv_atendimento24_perfil)
+
+        venda_produtos.isChecked = recuperarVenda_produtos() == "true"
+        banho.isChecked = recuperarBanho() == "true"
+        tosa.isChecked = recuperarTosa() == "true"
+        serv_veterinario.isChecked = recuperarServ_veterinario() == "true"
+        exames.isChecked = recuperarExames() == "true"
+        internacao.isChecked = recuperarInternacao() == "true"
+        atendimento_24h.isChecked = recuperarAtendimento_24h() == "true"
+
+
 
         var lati : Double
         var longe : Double
@@ -94,4 +121,34 @@ class PerfilPetshopActivity : AppCompatActivity() {
         val long = intent.getStringExtra("longitude")
         return long.toString()
     }
+
+    private fun recuperarVenda_produtos (): String? {
+        val venda_produtos = intent.getStringExtra("venda_produtos")
+        return venda_produtos.toString()
+    }
+    private fun recuperarBanho (): String? {
+        val banho = intent.getStringExtra("banho")
+        return banho.toString()
+    }
+    private fun recuperarTosa (): String? {
+        val tosa = intent.getStringExtra("tosa")
+        return tosa.toString()
+    }
+    private fun recuperarServ_veterinario (): String? {
+        val serv_veterinario = intent.getStringExtra("serv_veterinario")
+        return serv_veterinario.toString()
+    }
+    private fun recuperarExames (): String? {
+        val exames = intent.getStringExtra("exame")
+        return exames.toString()
+    }
+    private fun recuperarInternacao (): String? {
+        val internacao = intent.getStringExtra("internacao")
+        return internacao.toString()
+    }
+    private fun recuperarAtendimento_24h (): String? {
+        val atendimento_24h = intent.getStringExtra("atendimento_24h")
+        return atendimento_24h.toString()
+    }
+
 }
