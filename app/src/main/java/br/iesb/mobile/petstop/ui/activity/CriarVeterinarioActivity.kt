@@ -86,8 +86,6 @@ class CriarVeterinarioActivity : AppCompatActivity() {
             oftalmo = findViewById(R.id.oftalmologia_criar_vet)
             ortopedia = findViewById(R.id.ortopedia_criar_vet)
 
-
-
             val dom : String
             dom = check_to_string2(domicilio)
 

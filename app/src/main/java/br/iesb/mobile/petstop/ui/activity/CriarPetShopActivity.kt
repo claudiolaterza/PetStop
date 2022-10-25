@@ -7,13 +7,19 @@ import android.widget.*
 import br.com.receitasdecodigo.utils.MaskEditUtil
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.Petshop
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_criar_pet_shop.*
 
-class CriarPetShopActivity : AppCompatActivity() {
+class CriarPetShopActivity : AppCompatActivity(), OnMapReadyCallback{
     private lateinit var dbref : DatabaseReference
     private lateinit var confirma : ImageView
     private lateinit var cnpj : EditText
@@ -32,6 +38,7 @@ class CriarPetShopActivity : AppCompatActivity() {
     private lateinit var exames : CheckBox
     private lateinit var internacao : CheckBox
     private lateinit var atendimento_24h : CheckBox
+    private lateinit var mMap : GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +61,10 @@ class CriarPetShopActivity : AppCompatActivity() {
         val id = user.uid
 
         confirma = findViewById(R.id.add_new_petshop)
+        lat = findViewById(R.id.et_latitude_criar_petshop)
+        long = findViewById(R.id.et_longitude_criar_petshop)
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapa_add_petshop) as SupportMapFragment
+        mapFragment.getMapAsync(this)
 
         confirma.setOnClickListener{
 
@@ -124,4 +135,27 @@ class CriarPetShopActivity : AppCompatActivity() {
             return "false"
         }
     }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        val brasilia = LatLng(-15.7859944, -47.9043957)
+        mMap.addMarker(
+            MarkerOptions()
+            .position(brasilia)
+            .title("Defina a localização do Pet Perdido!"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng((brasilia)))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(brasilia, 13f))
+
+        mMap.setOnMapClickListener {
+            mMap.clear()
+            mMap.addMarker(MarkerOptions().position(it))
+            mMap.moveCamera(CameraUpdateFactory.newLatLng((it)))
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(it, 12f))
+            lat.setText(it.latitude.toString())
+            long.setText(it.longitude.toString())
+        }
+
+    }
+
 }

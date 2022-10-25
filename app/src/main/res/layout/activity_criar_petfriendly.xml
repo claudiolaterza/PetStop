@@ -20,17 +20,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment
+        android:id="@+id/mapa_add_petfriendly"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="391dp"
+        android:layout_height="301dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
+        android:layout_width="388dp"
+        android:layout_height="236dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/voltar_criar_petfriendly"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25">
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintVertical_bias="0.833">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,34 +81,20 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tv_latitude_criar_petfriendly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digite a latitude no Google Maps"
-                android:textSize="20sp" />
-
             <EditText
                 android:id="@+id/et_latitude_criar_petfriendly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a latitude"
                 android:inputType="numberSigned|number|numberDecimal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tv_longitude_criar_petfriendly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digite a longitude no Google Maps"
-                android:textSize="20sp" />
-
             <EditText
                 android:id="@+id/et_longitude_criar_petfriendly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="8dp"
                 android:hint="Digite a longitude"
                 android:inputType="numberSigned|number|numberDecimal"

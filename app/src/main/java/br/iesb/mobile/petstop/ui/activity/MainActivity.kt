@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         teste2btn = findViewById(R.id.TESTE2)
 
         testebtn.setOnClickListener{
-            var i = Intent(this, MenuPrincipalActivity::class.java)
+            var i = Intent(this, CriarPetPerdidoActivity::class.java)
             startActivity(i)
 
         }

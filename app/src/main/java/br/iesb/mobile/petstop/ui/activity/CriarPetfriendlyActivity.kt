@@ -8,12 +8,18 @@ import android.widget.ImageView
 import android.widget.Toast
 import br.iesb.mobile.petstop.R
 import br.iesb.mobile.petstop.domain.PetFriendly
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
-class CriarPetfriendlyActivity : AppCompatActivity() {
+class CriarPetfriendlyActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var confirma : ImageView
@@ -22,6 +28,8 @@ class CriarPetfriendlyActivity : AppCompatActivity() {
     private lateinit var long : EditText
     private lateinit var name : EditText
     private lateinit var voltar : ImageView
+    private lateinit var mMap : GoogleMap
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +47,11 @@ class CriarPetfriendlyActivity : AppCompatActivity() {
         val id = user.uid
 
         confirma = findViewById(R.id.add_petfriendly)
+
+        lat = findViewById(R.id.et_latitude_criar_petfriendly)
+        long = findViewById(R.id.et_longitude_criar_petfriendly)
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapa_add_petfriendly) as SupportMapFragment
+        mapFragment.getMapAsync(this)
 
         confirma.setOnClickListener{
 
@@ -69,5 +82,27 @@ class CriarPetfriendlyActivity : AppCompatActivity() {
         dbref = FirebaseDatabase.getInstance().getReference("LocalPetFriendly")
         val petfriendly = PetFriendly(id, name,endereco, lat, long)
         dbref.child(id.toString()).setValue(petfriendly)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        val brasilia = LatLng(-15.7859944, -47.9043957)
+        mMap.addMarker(
+            MarkerOptions()
+            .position(brasilia)
+            .title("Defina a localização do Pet Perdido!"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng((brasilia)))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(brasilia, 13f))
+
+        mMap.setOnMapClickListener {
+            mMap.clear()
+            mMap.addMarker(MarkerOptions().position(it))
+            mMap.moveCamera(CameraUpdateFactory.newLatLng((it)))
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(it, 12f))
+            lat.setText(it.latitude.toString())
+            long.setText(it.longitude.toString())
+        }
+
     }
 }
